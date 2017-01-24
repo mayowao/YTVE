@@ -22,7 +22,6 @@ body {
     min-height: 100%;
     background: white;
     position: relative;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     padding: 10px;
     
 }
@@ -34,16 +33,14 @@ body {
 }
 
 .searchbar:hover {
-    content: '';
     position: relative;
-    z-index: -1; /* hide shadow behind image */
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
 }
  
 header {
   background: #d2edf4;
   background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
-  padding: 7px 20px 7px 20px;
+  padding: 7px 10px 7px 10px;
   position: fixed;
 }
  
