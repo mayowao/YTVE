@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Task from './Task.jsx';
  
 // App component - represents the whole app
-export default class App extends Component {
+export default class HeaderBar extends Component {
   getTasks() {
     return [
       { _id: 1, text: 'This is task 1' },
