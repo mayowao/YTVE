@@ -9,7 +9,7 @@ export default class Profile extends Component {
   }
 }
  
-Task.propTypes = {
+Profile.propTypes = {
   // This component gets the task to display through a React prop.
   // We can use propTypes to indicate it is required
   name: PropTypes.object.isRequired,
