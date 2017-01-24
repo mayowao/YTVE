@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
  
-import Task from './Task.jsx';
+import Profile from './Profile.jsx';
  
 // App component - represents the whole app
 export default class Headerbar extends Component {
-  getTasks() {
+  getProfileInfo() {
     return [
       { _id: 1, text: 'This is task 1' },
       { _id: 2, text: 'This is task 2' },
@@ -12,9 +12,9 @@ export default class Headerbar extends Component {
     ];
   }
  
-  renderTasks() {
-    return this.getTasks().map((task) => (
-      <Task key={task._id} task={task} />
+  renderProfileInfo() {
+    return this.getProfileInfo().map((task) => (
+      <Profile key={task._id} task={task} />
     ));
   }
  
@@ -26,7 +26,7 @@ export default class Headerbar extends Component {
         </header>
  
         <ul>
-          {this.renderTasks()}
+          {this.renderProfileInfo()}
         </ul>
       </div>
     );
