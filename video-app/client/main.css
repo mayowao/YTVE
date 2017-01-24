@@ -33,7 +33,7 @@ body {
     border-style: inset;
 }
 
-.container::after {
+.container:hover {
     content: '';
     position: absolute;
     z-index: -1; /* hide shadow behind image */
