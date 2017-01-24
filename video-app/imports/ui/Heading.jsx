@@ -6,7 +6,7 @@ import Profile from './Profile.jsx';
 import QuickFind from './QuickFind.jsx';
  
 // Header component - represents the header functions
-export default class Header extends Component {
+export default class Heading extends Component {
   getProfileInfo() {
     return [
       { _id: 1, text: 'This is my profile name' },
