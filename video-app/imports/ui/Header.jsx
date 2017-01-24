@@ -13,12 +13,14 @@ export default class Header extends Component {
       { _id: 2, text: 'This is my reccomendations' },
       { _id: 3, text: 'This is my most commonly used buttons' },
     ];
+   console.log('getProfile has rendered');
   }
  
   renderProfileInfo() {
     return this.getProfileInfo().map((name) => (
       <Profile key={name._id} name={name} />
     ));
+   console.log('ProfileInfo has rendered');
   }
  
   render() {
