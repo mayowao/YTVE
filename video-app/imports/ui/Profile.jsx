@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 export default class Profile extends Component {
   render() {
     return (
-      <li>{this.props.name.text}</li>
+      <li>{this.props.pname.text}</li>
     );
   }
 }
@@ -12,5 +12,5 @@ export default class Profile extends Component {
 Profile.propTypes = {
   // This component gets the task to display through a React prop.
   // We can use propTypes to indicate it is required
-  name: PropTypes.object.isRequired,
+  pname: PropTypes.object.isRequired,
 };
