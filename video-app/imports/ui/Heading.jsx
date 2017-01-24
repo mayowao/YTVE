@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
  
-import Search from './Search.jsx';
+import Profile from './Profile.jsx'
+/*import Search from './Search.jsx';
 import Settings from './Settings.jsx';
-import Profile from './Profile.jsx';
-import QuickFind from './QuickFind.jsx';
+import QuickFind from './QuickFind.jsx';*/
  
 // Header component - represents the header functions
 export default class Heading extends Component {
