@@ -23,7 +23,7 @@ export default class Headerbar extends Component {
  
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: 'Seacrh'};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,8 +44,9 @@ export default class Headerbar extends Component {
       <div className="searchbar">
        <form onSubmit={this.handleSubmit}>
         <label>
-          Search:
+         
           <input type="text" value={this.state.value} onChange={this.handleChange} />
+        
         </label>
         <input type="submit" value="Submit" />
        </form>
