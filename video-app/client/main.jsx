@@ -2,13 +2,13 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
  
-import Heading from '../imports/ui/Heading.jsx';
+import Headerbar from '../imports/ui/Headerbar.jsx';
 import MainView from '.../imports/ui/MainView.jsx';
-import Footer from '.../imports/ui/Footer.jsx'; 
+import Footerbar from '.../imports/ui/Footerbar.jsx'; 
  
 Meteor.startup(() => {
- render(<Heading />, document.getElementById('heading'));
+ render(<Headerbar />, document.getElementById('headerbar'));
  render(<MainView />, document.getElementById('mainview'));
- render(<Footer />, document.getElementById('footer'));
+ render(<Footerbar />, document.getElementById('footerbar'));
   
 });
