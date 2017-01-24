@@ -14,7 +14,7 @@ export default class Headerbar extends Component {
  
   renderProfileInfo() {
     return this.getProfileInfo().map((pname) => (
-      <Profile key={pname._id} task={pname} />
+      <Profile key={pname._id} pname={pname} />
     ));
   }
  
