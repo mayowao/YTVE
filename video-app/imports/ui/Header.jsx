@@ -5,7 +5,7 @@ import Settings from './Settings.jsx';
 import Profile from './Profile.jsx';
 import QuickFind from './QuickFind.jsx';
  
-// App component - represents the whole app
+// Header component - represents the header functions
 export default class Header extends Component {
   getProfileInfo() {
     return [
