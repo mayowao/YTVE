@@ -13,8 +13,8 @@ export default class Headerbar extends Component {
   }
  
   renderProfileInfo() {
-    return this.getProfileInfo().map((task) => (
-      <Profile key={task._id} task={task} />
+    return this.getProfileInfo().map((name) => (
+      <Profile key={name._id} task={name} />
     ));
   }
  
