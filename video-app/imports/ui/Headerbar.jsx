@@ -6,7 +6,7 @@ import Settings from './Settings.jsx';
 import QuickFind from './QuickFind.jsx';*/
  
 // Header component - represents the header functions
-export default class Heading extends Component {
+export default class Headerbar extends Component {
   getProfileInfo() {
     return [
       { _id: 1, text: 'This is my profile name' },
@@ -17,8 +17,8 @@ export default class Heading extends Component {
   }
  
   renderProfileInfo() {
-    return this.getProfileInfo().map((name) => (
-      <Profile key={name._id} name={name} />
+    return this.getProfileInfo().map((pname) => (
+      <Profile key={pname._id} pname={pname} />
     ));
    console.log('ProfileInfo has rendered');
   }
