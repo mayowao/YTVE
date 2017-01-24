@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
  
-import Task from './Search.jsx';
+import Search from './Search.jsx';
+import Settings from './Settings.jsx';
+import Profile from './Profile.jsx';
+import QuickFind from './QuickFind.jsx';
  
 // App component - represents the whole app
-export default class App extends Component {
-  getTasks() {
+export default class Header extends Component {
+  getProfileInfo() {
     return [
-      { _id: 1, text: 'This is task 1' },
-      { _id: 2, text: 'This is task 2' },
-      { _id: 3, text: 'This is task 3' },
+      { _id: 1, text: 'This is my profile name' },
+      { _id: 2, text: 'This is my reccomendations' },
+      { _id: 3, text: 'This is my most commonly used buttons' },
     ];
   }
  
-  renderTasks() {
-    return this.getTasks().map((task) => (
-      <Task key={task._id} task={task} />
+  renderProfileInfo() {
+    return this.getProfileInfo().map((name) => (
+      <Profile key={name._id} name={name} />
     ));
   }
  
@@ -26,7 +29,7 @@ export default class App extends Component {
         </header>
  
         <ul>
-          {this.renderTasks()}
+          {this.renderProfileInfo()}
         </ul>
       </div>
     );
