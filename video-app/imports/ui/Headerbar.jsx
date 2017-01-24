@@ -13,14 +13,12 @@ export default class Headerbar extends Component {
       { _id: 2, text: 'This is my reccomendations' },
       { _id: 3, text: 'This is my most commonly used buttons' },
     ];
-   console.log('getProfile has rendered');
   }
  
   renderProfileInfo() {
     return this.getProfileInfo().map((pname) => (
       <Profile key={pname._id} pname={pname} />
     ));
-   console.log('ProfileInfo has rendered');
   }
  
   render() {
