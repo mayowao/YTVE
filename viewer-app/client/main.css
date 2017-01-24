@@ -50,7 +50,7 @@ form {
   position: relative;
 }
  
-.new-name input {
+.new-pname input {
   box-sizing: border-box;
   padding: 10px 0;
   background: transparent;
@@ -60,7 +60,7 @@ form {
   font-size: 1em;
 }
  
-.new-name input:focus{
+.new-pname input:focus{
   outline: 0;
 }
  
@@ -121,7 +121,7 @@ header .hide-completed {
     clear: both;
   }
  
-  .new-name input {
+  .new-pname input {
     padding-bottom: 5px;
   }
 }
