@@ -25,12 +25,16 @@ export default class Headerbar extends Component {
     super(props);
     this.state = {value: 'Search'};
 
+    this.handleSearchClick = this.handleSearchClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleSearchClick(event) {
     this.setState({value: ''});
+  }
+ 
+  handleChange(event) {
     this.setState({value: event.target.value});
   }
 
@@ -46,7 +50,7 @@ export default class Headerbar extends Component {
        <form onSubmit={this.handleSubmit}>
         <label>
          
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" value={this.state.value} onClick={this.handleSearchClick} onChange={this.handleChange} />
         
         </label>
         <input type="submit" value="Insertsearchpic" />
