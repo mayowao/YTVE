@@ -28,12 +28,9 @@ export default class Headerbar extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
- 
- changeDisplay(event) {
-    this.setState({value: event.target.value});
- }
 
   handleChange(event) {
+    this.setState({value: ''});
     this.setState({value: event.target.value});
   }
 
