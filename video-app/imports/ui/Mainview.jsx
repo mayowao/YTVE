@@ -22,7 +22,7 @@ export default class Mainview extends Component {
     return (
       <div className="searchbar">
         <header>
-          <h1>Viewing Videos</h1>
+          <h2>Viewing Videos</h2>
         </header>
  
         <ul>
