@@ -6,24 +6,18 @@
   font-size: 14px;
 }*/
 
+/*--------------------------------------------------------------------*/ 
+
 #headerbar {
    background: #d2edf4;
    background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
    padding: 7px 10px 7px 10px;
-   position: static;
+   position: fixed;
    display: block;
 }
 
-#mainview {
-   position: static;
-   display: block;
-}
-
-/*--------------------------------------------------------------------*/ 
 .searchbar {
-    display: block;
     background: white;
-    position: relative;
     padding: 10px;
     
 }
@@ -35,12 +29,16 @@
 }
 
 .searchbar:hover {
-    position: relative;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
 }
 
 
 /*-----------------------------------------------------------------------------------*/
+
+#mainview {
+   position: static;
+   display: block;
+}
 
 .vidviewer {
     min-height: 100%;
