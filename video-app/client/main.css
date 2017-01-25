@@ -48,7 +48,8 @@ header {
 /*-----------------------------------------------------------------------------------*/
 
 .vidviewer {
-    /*margin: 0 auto;*/
+    display: block;
+    margin: auto;
     /*min-height: 100%;*/
     background: white;
     position: relative;
