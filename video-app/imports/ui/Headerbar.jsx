@@ -41,6 +41,7 @@ export default class Headerbar extends Component {
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
+    this.setState({value: 'Search'});
     console.log('Hello, youve submited');
   }
  
