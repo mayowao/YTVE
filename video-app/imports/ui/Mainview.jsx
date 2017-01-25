@@ -20,7 +20,7 @@ export default class Mainview extends Component {
  
   render() {
     return (
-      <div className="container">
+      <div className="searchbar">
         <header>
           <h1>Viewing Videos</h1>
         </header>
