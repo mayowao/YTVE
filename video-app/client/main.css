@@ -43,6 +43,28 @@ header {
   padding: 7px 10px 7px 10px;
   position: fixed;
 }
+
+/*-----------------------------------------------------------------------------------*/
+
+.vidviewer {
+    margin: 0 auto;
+    /*min-height: 100%;*/
+    background: white;
+    position: relative;
+    padding: 10px;
+    
+}
+
+.vidviewer img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+.vidviewer:hover {
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
+}
  
 #login-buttons {
   display: block;
