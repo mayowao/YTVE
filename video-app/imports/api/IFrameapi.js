@@ -1,3 +1,7 @@
+import { Mongo } from 'meteor/mongo';
+ 
+export const Tasks = new Mongo.Collection('tasks');
+
 var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
