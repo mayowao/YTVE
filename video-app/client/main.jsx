@@ -6,6 +6,7 @@ import Headerbar from '../imports/ui/Headerbar.jsx';
 import Mainview from '../imports/ui/Mainview.jsx';
  
 Meteor.startup(() => {
- render(<Headerbar />, document.getElementById('headerbar'));
+ 
  render(<Mainview />, document.getElementById('mainview'));
+ render(<Headerbar />, document.getElementById('headerbar'));
 });
