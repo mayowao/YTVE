@@ -76,17 +76,19 @@ header {
     position: relative;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); 
 }
- 
+
+/*-------------------------------------------------------*/
+
 #login-buttons {
   display: block;
 }
  
 h1 {
   font-size: 1.5em;
-  margin: 0;
+  /*margin: 0;
   margin-bottom: 10px;
   display: relative;
-  margin-right: 1em;
+  margin-right: 1em;*/
 }
  
 form {
@@ -94,7 +96,7 @@ form {
   margin-bottom: -10px;
   position: relative;
 }
- 
+/* 
 .new-pname input {
   box-sizing: border-box;
   padding: 10px 0;
@@ -171,3 +173,4 @@ header .hide-completed {
   }
 }
 
+*/
