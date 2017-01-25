@@ -10,8 +10,8 @@ export default class Headerbar extends Component {
   getProfileInfo() {
     return [
       { _id: 1, text: 'This is my profile name' },
-      { _id: 2, text: 'This is my reccomendations' },
-      { _id: 3, text: 'This is my most commonly used buttons' },
+      { _id: 2, text: 'These are my reccomendations' },
+      { _id: 3, text: 'These are my most commonly used buttons' },
     ];
   }
  
