@@ -16,7 +16,7 @@ body {
 }
 
 #mainview {
-   position: relative;
+   position: static;
    display: block;
 }
 
