@@ -2,8 +2,14 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
  
-import App from '../imports/ui/App.jsx';
+import Headerbar from '../imports/ui/Headerbar.jsx';
+import Mainview from '../imports/ui/Mainview.jsx';
 
 Meteor.startup(() => {
- render(<App />, document.getElementById('render-app'));
+ render(
+   <div>
+     <Headerbar />
+     <Mainview />
+   </div>, 
+  document.getElementById('headerbar','mainview'));
 });
