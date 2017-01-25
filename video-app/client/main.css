@@ -16,6 +16,15 @@ body {
  
   font-size: 14px;
 }
+
+#headerbar {
+   display: block;
+}
+
+#mainview {
+   display: block;
+}
+
  
 .searchbar {
     display: block;
