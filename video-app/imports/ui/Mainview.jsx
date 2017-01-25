@@ -7,7 +7,7 @@ export default class Mainview extends Component {
   getVideos() {
     return [
       { _id: 1, text: 'This is video 1' },
-      { _id: 2, text: 'This is video 2' },
+      { _id: 2, text: 'This is video 2.5' },
       { _id: 3, text: 'This is video 3' },
     ];
   }
