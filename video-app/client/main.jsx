@@ -7,9 +7,8 @@ import Mainview from '../imports/ui/Mainview.jsx';
  
 Meteor.startup(() => {
  render(
-  <div id="app">
-  <Headerbar />, document.getElementById('headerbar')
-  /*<Mainview />, document.getElementById('mainview')*/
+  <div className="app">
+    <Headerbar />, document.getElementById('headerbar')
   </div>
  );
 });
