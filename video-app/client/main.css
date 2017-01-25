@@ -44,8 +44,6 @@ body {
 /*-----------------------------------------------------------------------------------*/
 
 .vidviewer {
-    display: block;
-    margin: auto;
     min-height: 100%;
     background: white;
     padding: 10px;
