@@ -1,17 +1,18 @@
 /* From Youtube iFrame API exmple*/
 /*Change css? so that is aligned with layout of website when called*/
+/*Need to assign changeable components? so that a entire callback? is stored with gives video playing instructions*/
 
 <div id="ytplayer"></div>
 
 <script>
-  // Load the IFrame Player API code asynchronously.
+  /* Load the IFrame Player API code asynchronously.*/ 
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
+  /* Replace the 'ytplayer' element with an <iframe> and */ 
+  /* YouTube player after the API code downloads. */
   var player;
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
