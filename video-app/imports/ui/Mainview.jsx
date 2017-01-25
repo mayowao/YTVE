@@ -4,19 +4,54 @@ import Displayvideo from './Displayvideo.jsx';
  
 // MainView component - represents the Viewing/Editing Secion of our app
 export default class Mainview extends Component {
-  getVideos() {
+  getRelVideos() {
     return [
-      { _id: 1, text: 'This is video 1' },
-      { _id: 2, text: 'This is video 2.5' },
-      { _id: 3, text: 'This is video 3' },
+      { _id: 1, text: 'This is related video 1' },
+      { _id: 2, text: 'This is related video 2' },
+      { _id: 3, text: 'This is related video 3' },
     ];
   }
  
+ 
+ //Displaying The Video
+ getVideo(){
+ }
+ 
   renderVideos() {
-    return this.getVideos().map((vid) => (
+    return this.getRelVideos().map((vid) => (
       <Displayvideo key={vid._id} vid={vid} />
     ));
   }
+ 
+ //Displaying the Video Edits
+constructor(props) {
+    super(props);
+    this.state = {
+      value: 'Search',
+      
+    };
+
+    this.handleEdits = this.handleEdits.bind(this);
+    this.getEdits = this.getChange.bind(this);
+    this.renderEdits = this.renderEdits.bind(this);
+  }
+ 
+ handleEdits(){
+  
+ }
+ 
+ getEdits(){
+ }
+ 
+ renderEdits(){
+ }
+ 
+ getcomments(){
+ }
+ 
+ //Displaying the comments
+ renderComments(){
+ }
  
   render() {
     return (
