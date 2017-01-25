@@ -20,11 +20,8 @@ export default class Mainview extends Component {
  
   render() {
     return (
-      <div className="searchbar">
-        <header>
+      <div className="vidviewer">        
           <h2>Viewing Videos</h2>
-        </header>
- 
         <ul>
           {this.renderVideos()}
         </ul>
