@@ -9,7 +9,7 @@ Meteor.startup(() => {
  render(
   <div id="app">
   <Headerbar />, document.getElementById('headerbar')
-  <Mainview />, document.getElementById('mainview')
+  /*<Mainview />, document.getElementById('mainview')*/
   </div>
  );
 });
