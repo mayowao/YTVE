@@ -27,7 +27,7 @@ export default class Mainview extends Component {
 constructor(props) {
     super(props);
     this.state = {
-      value: 'Search',
+      value: 'Search'
       
     };
 
