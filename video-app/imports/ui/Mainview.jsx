@@ -78,9 +78,7 @@ export default class Mainview extends Component {
        <ul>
          {this.renderRelVideos()}
        </ul>
-        <div className="vidscreene">
-         {this.renderVideos()}
-        </div>
+        
       </div>
     );
   }
