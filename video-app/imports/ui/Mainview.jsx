@@ -12,23 +12,16 @@ export default class Mainview extends Component {
     ];
   }
  
- 
- //Displaying The Video
- getVideo(){
- }
- 
-  renderVideos() {
-    return this.getRelVideos().map((vid) => (
-      <Displayvideo key={vid._id} vid={vid} />
-    ));
-  }
- 
- //Displaying the Video Edits
-constructor(props) {
+  //Displaying the Video Edits
+  constructor(props) {
     super(props);
     this.state = {
-      value: 'Search'
-      
+      value: 'Search',
+      autoplay: 1,
+      position: 0,
+      height: 360,
+      width: 420,
+      pauses: 6000      
     };
 
     this.handleEdits = this.handleEdits.bind(this);
@@ -36,22 +29,33 @@ constructor(props) {
     this.renderEdits = this.renderEdits.bind(this);
   }
  
- handleEdits(){
+  handleEdits(){
   
- }
+  }
  
- getEdits(){
- }
+  getEdits(){
+  }
  
- renderEdits(){
- }
+  renderEdits(){
+  }
  
- getcomments(){
- }
+  getcomments(){
+  }
  
- //Displaying the comments
- renderComments(){
- }
+   //Displaying The Video
+  getVideo(){
+   
+  }
+ 
+  renderVideos() {
+    return this.getRelVideos().map((vid) => (
+      <Displayvideo key={vid._id} vid={vid} />
+    ));
+  }
+ 
+  //Displaying the comments
+  renderComments(){
+  }
  
   render() {
     return (
@@ -59,12 +63,12 @@ constructor(props) {
           <h1>Viewing Videos</h1>
       <div className="vidscreen">
        <iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/embed/vJoie-znJI8?
+       src="https://www.youtube.com/embed/vJoie-znJI8?
        enablejsi=1&
        autoplay=0&
        rel=0"
-  frameborder="0"></iframe>
-       </div>
+       frameborder="0"></iframe>
+      </div>
         <ul>
           {this.renderVideos()}
         </ul>
