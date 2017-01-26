@@ -41,9 +41,7 @@ export default class Mainview extends Component {
   renderEdits(){
   }
  
-  getcomments(){
-  }
- 
+
   //Displaying The Video
   getVideo(){
    
@@ -60,6 +58,9 @@ export default class Mainview extends Component {
   }
  
   //Displaying the comments
+    getComments(){
+  }
+  
   renderComments(){
   }
  
