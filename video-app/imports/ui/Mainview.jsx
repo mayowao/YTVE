@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
  
+import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
  
 // MainView component - represents the Viewing/Editing Secion of our app
-export default class Mainview extends Component {
+class Mainview extends Component {
   getRelVideos() {
     return [
       { _id: 1, text: 'This is related video 1' },
@@ -42,12 +44,16 @@ export default class Mainview extends Component {
   getcomments(){
   }
  
-   //Displaying The Video
+  //Displaying The Video
   getVideo(){
    
   }
  
   renderVideos() {
+  }
+ 
+  //Display Related Videos
+  renderRelVideos() {
     return this.getRelVideos().map((vid) => (
       <Displayvideo key={vid._id} vid={vid} />
     ));
@@ -69,9 +75,12 @@ export default class Mainview extends Component {
        rel=0"
        frameborder="0"></iframe>
       </div>
-        <ul>
-          {this.renderVideos()}
-        </ul>
+       <ul>
+         {this.renderRelVideos()}
+       </ul>
+        <div className="vidscreene">
+         {this.renderVideos()}
+        </div>
       </div>
     );
   }
