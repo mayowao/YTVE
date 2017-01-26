@@ -19,11 +19,11 @@ export default class Mainview extends Component {
     super(props);
     this.state = {
       value: 'Search',
-      autoplay: 1,
-      position: 0,
-      height: 360,
-      width: 420,
-      pauses: 6000      
+      autoplay: '1',
+      position: '0',
+      height: '360',
+      width: '420',
+      pauses: '6000'      
     };
 
     this.handleEdits = this.handleEdits.bind(this);
