@@ -32,7 +32,7 @@ constructor(props) {
     };
 
     this.handleEdits = this.handleEdits.bind(this);
-    this.getEdits = this.getChange.bind(this);
+    this.getEdits = this.getEdits.bind(this);
     this.renderEdits = this.renderEdits.bind(this);
   }
  
