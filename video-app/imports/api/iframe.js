@@ -1,8 +1,11 @@
-import { Mongo } from 'meteor/mongo';
+//import { Mongo } from 'meteor/mongo';
+import React, { Component } from 'react';
  
-export const Tasks = new Mongo.Collection('tasks');
+//export const Iframe = new Mongo.Collection('iframe');
 
-var tag = document.createElement('script');
+export default class Iframe extends Component {
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -41,3 +44,5 @@ var tag = document.createElement('script');
       function stopVideo() {
         player.stopVideo();
       }
+}
+
