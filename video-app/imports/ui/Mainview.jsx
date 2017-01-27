@@ -45,7 +45,11 @@ class Mainview extends Component {
  
 
   //Displaying The Video
-  getVideo(){
+  getVideos(){
+   tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
    
   }
  
@@ -111,7 +115,12 @@ class Mainview extends Component {
        <ul>
          {this.renderRelVideos()}
        </ul>
+      <div className="videoscreene">
          {this.renderVideos()}
+      </div>
+      <div className="scripts">
+       {this.getVideos()}
+      </div>
       </div>
     );
   }
