@@ -4,6 +4,8 @@ import { createContainer } from 'meteor/react-meteor-data';
  
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
+
+var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
 class Mainview extends Component {
@@ -44,7 +46,8 @@ class Mainview extends Component {
   getVideos(){
   }
  
-  renderVideos() {
+  renderVideos.load(function(YT) {
+  //renderVideos(function) {
     player = new YT.Player('player', {
       height: '390',
       width: '640',
@@ -54,7 +57,7 @@ class Mainview extends Component {
         'onStateChange': this.onPlayerStateChange
       }
     });
-  }
+  })
 
   // 4. The API will call this function when the video player is ready.
   onPlayerReady(event) {
