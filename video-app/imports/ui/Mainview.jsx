@@ -52,13 +52,13 @@ class Mainview extends Component {
    return [
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-          player = new YT.Player('player', {
+        player = new YT.Player('player', {
           height: '390',
           width: '640',
           videoId: 'SXiSVQZLje8',
           events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onReady': this.onPlayerReady,
+            'onStateChange': this.onPlayerStateChange
           }
         })
     ];
