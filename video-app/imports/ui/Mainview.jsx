@@ -62,8 +62,14 @@ class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        'onReady': this.onPlayerReady,
-        'onStateChange': this.onPlayerStateChange
+        'onReady': function(event){
+          event.target.playVideo();
+        },
+        'onStateChange': function(event){
+          if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
+          setTimeout(function(){player.stopVideo()}, 6000);
+          this.setState({value: 'true'});
+        }
       }
     });
   }
@@ -74,7 +80,7 @@ class Mainview extends Component {
                            
 
   // 4. The API will call this function when the video player is ready.
-  onPlayerReady = function(event) {
+  onPlayerReady(event) {
     event.target.playVideo();
   }
 
@@ -82,14 +88,14 @@ class Mainview extends Component {
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   // var done = false;
-  onPlayerStateChange = function(event) {
+  onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
       setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
  
-  stopVideo = function() {
+  stopVideo() {
     player.stopVideo();
   }
 
