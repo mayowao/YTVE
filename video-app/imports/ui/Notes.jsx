@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { createContainer } from 'meteor/react-meteor-data';
+
+//import { createContainer } from 'meteor/react-meteor-data';
  
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
@@ -23,7 +24,8 @@ export default class Mainview extends Component {
       position: '0',
       height: '360',
       width: '420',
-      pauses: '6000'      
+      pauses: '6000',
+      images: 'no'
     };
 
     this.handleEdits = this.handleEdits.bind(this);
@@ -36,6 +38,12 @@ export default class Mainview extends Component {
   }
  
   getEdits(){
+    return [
+      { _id: 1, text: 'This is related video 1' },
+      { _id: 2, text: 'This is related video 2' },
+      { _id: 3, text: 'This is related video 3' },
+    ];
+     
   }
  
   renderEdits(){
@@ -43,11 +51,19 @@ export default class Mainview extends Component {
  
 
   //Displaying The Video
-  getVideo(){
+  getVideos(){
    
   }
  
   renderVideos() {
+    return [ 
+      <iframe id="ytplayer" type="text/html" width="640" height="360"
+          src="https://www.youtube.com/embed/vJoie-znJI8?
+          enablejsi=1&
+          autoplay=this.state.autoplay&
+          rel=0"
+          frameborder="0"></iframe>
+     ];
   }
  
   //Display Related Videos
@@ -58,7 +74,7 @@ export default class Mainview extends Component {
   }
  
   //Displaying the comments
-    getComments(){
+  getComments(){
   }
   
   renderComments(){
@@ -67,19 +83,21 @@ export default class Mainview extends Component {
   render() {
     return (
       <div className="vidviewer">        
-          <h1>Viewing Videos</h1>
-      <div className="vidscreen">
-       <iframe id="ytplayer" type="text/html" width="640" height="360"
-       src="https://www.youtube.com/embed/vJoie-znJI8?
-       enablejsi=1&
-       autoplay=0&
-       rel=0"
-       frameborder="0"></iframe>
-      </div>
-       <ul>
-         {this.renderRelVideos()}
-       </ul>
-        
+        <h1>Viewing Videos</h1>
+        <div className="vidscreen">
+          <iframe id="ytplayer" type="text/html" width="640" height="360"
+          src="https://www.youtube.com/embed/vJoie-znJI8?
+          enablejsi=1&
+          autoplay=0&
+          rel=0"
+          frameborder="0"></iframe>
+          </div>
+        <ul>
+          {this.renderRelVideos()}
+        </ul>
+        <div className="vidscreene">
+         {this.renderVideos()}
+        </div>
       </div>
     );
   }
