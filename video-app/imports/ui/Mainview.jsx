@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import Displayvideo from './Displayvideo.jsx';
  
 // MainView component - represents the Viewing/Editing Secion of our app
-export default class Mainview extends Component {
+class Mainview extends Component {
   getRelVideos() {
     return [
       { _id: 1, text: 'This is related video 1' },
