@@ -11,9 +11,7 @@
  * 
  */
 
-import React, { Component, PropTypes } from 'react';
-
-export default class Dragiframe extends Component {
+export default class Dragiframe {(
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -241,5 +239,5 @@ function DIF_drag(x,y) {
   DIF_pageMouseDownLeft[DIF_iframeBeingDragged] += x;
   DIF_pageMouseDownTop[DIF_iframeBeingDragged] += y;
   }
-}
+)}
 
