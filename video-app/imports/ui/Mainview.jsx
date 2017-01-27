@@ -152,6 +152,6 @@ export default createContainer(() => {
     videos: Videos.find({}).fetch(),
     /*tasks: Iframe.find({}).fetch(),*/
   };
-}, Mainview);
+}, Relview);
 
 
