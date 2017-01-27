@@ -69,14 +69,14 @@ class Mainview extends Component {
   }
   
   YT.load();
-  //console.log(this.state.value);
+  console.log(this.state.value);
   }
  
                            
 
   // 4. The API will call this function when the video player is ready.
   onPlayerReady(event) {
-    //console.log(this.state.value);
+    console.log(this.state.value);
     event.target.playVideo();
   }
 
