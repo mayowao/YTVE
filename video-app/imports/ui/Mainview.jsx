@@ -64,13 +64,9 @@ class Mainview extends Component {
       events: {
         'onReady': function(event){
           event.target.playVideo();
-        },
-        'onStateChange': function(event){
           console.log(this.state.value);
-          if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-          setTimeout(function(){player.stopVideo()}, 6000);
-          this.setState({value: 'true'});
-        }
+        },
+        //'onStateChange': 
       }
     });
   }
