@@ -139,7 +139,7 @@ class Mainview extends Component {
  
 export default createContainer(() => {
   return {
-    //videos: Tasks.find({}).fetch(),
+    videos: 'Heeellooo',
     /*tasks: Iframe.find({}).fetch(),*/
   };
 }, Mainview);
