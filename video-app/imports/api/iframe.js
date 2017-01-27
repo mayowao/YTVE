@@ -3,7 +3,7 @@
  
 //export const Iframe = new Mongo.Collection('iframe');
 
-export default class Iframe {
+export default function Iframe {
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";
