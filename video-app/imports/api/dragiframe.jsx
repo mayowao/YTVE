@@ -11,7 +11,9 @@
  * 
  */
 
+import React, { Component, PropTypes } from 'react';
 
+export default class Dragiframe extends Component {
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -26,7 +28,6 @@ var DIF_highestZIndex=99;
 var DIF_raiseSelectedIframe=false;
 var DIF_allowDragOffScreen=false;
 
-export const Dragiframe = {
 // Set to true to always raise the dragged iframe to top zIndex
 function bringSelectedIframeToTop(val) {
   DIF_raiseSelectedIframe = val;
@@ -241,3 +242,4 @@ function DIF_drag(x,y) {
   DIF_pageMouseDownTop[DIF_iframeBeingDragged] += y;
   }
 }
+
