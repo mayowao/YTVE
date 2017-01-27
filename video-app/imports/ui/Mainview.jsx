@@ -140,7 +140,7 @@ Mainview.propTypes = {
  
 export default createContainer(() => {
   return {
-    videos: 'Heeeellooo',
+    videos: {'Heeeellooo'},
     /*tasks: Iframe.find({}).fetch(),*/
   };
 }, Mainview);
