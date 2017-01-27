@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
  
 import Profile from './Profile.jsx'
 /*import Search from './Search.jsx';
