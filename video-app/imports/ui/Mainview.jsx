@@ -54,6 +54,7 @@ class Mainview extends Component {
       height: '390',
       width: '640',
       videoId: 'SXiSVQZLje8',
+      playerVars: { 'autoplay': 1 },
       events: {
         onReady: function (event) {this.onPlayerReady},
         onStateChange: function (event) {this.onPlayerStateChange}
