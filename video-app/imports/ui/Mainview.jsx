@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { createContainer } from 'meteor/react-meteor-data';
+import { createContainer } from 'meteor/react-meteor-data';
  
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
