@@ -71,7 +71,6 @@ export default class Mainview extends Component {
       <div className="vidscreen">
        <iframe id="ytplayer" type="text/html" width="640" height="360"
        src="https://www.youtube.com/embed/vJoie-znJI8?
-       enablejsi=0&
        autoplay=1&
        rel=0"
        frameborder="0"></iframe>
