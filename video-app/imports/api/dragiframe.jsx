@@ -11,7 +11,7 @@
  * 
  */
 
-class Dragiframe {
+class Dragiframe = {
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -241,5 +241,5 @@ function DIF_drag(x,y) {
   }
 };
 
-export default class {Dragiframe}
+export default class Dragiframe
 
