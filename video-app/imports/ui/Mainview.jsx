@@ -60,7 +60,7 @@ class Mainview extends Component {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
-        });
+        })
     ];
   }
 
