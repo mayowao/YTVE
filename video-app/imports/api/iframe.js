@@ -5,9 +5,8 @@
 
 export default class Iframe {
       // 2. This code loads the IFrame Player API code asynchronously.
-   var getapi = document.createElement('script');
-
-      getapi.src = "https://www.youtube.com/iframe_api";
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(getapi, firstScriptTag);
 }
