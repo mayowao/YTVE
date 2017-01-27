@@ -114,7 +114,7 @@ class Mainview extends Component {
          width="640" 
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
-         <body onload="addHandle(document.getElementsByTagName('body').item(0), window);" style="cursor: move;"></body>
+         <body onload="addHandle(document.getElementsByTagName('body').item(0), window)" style="cursor: move"></body>
         </iframe>
         </div>
         <ul>
