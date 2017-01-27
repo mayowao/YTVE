@@ -81,7 +81,7 @@ class Mainview extends Component {
   //    the player should play for six seconds and then stop.
   // var done = false;
   onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
+    if (event.data == player.PlayerState.PLAYING && !this.state.value) {
       setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
