@@ -10,6 +10,8 @@
  * your site. Copy the files locally to your server instead.
  * 
  */
+
+export default class Dragiframe {
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -237,3 +239,4 @@ function DIF_drag(x,y) {
   DIF_pageMouseDownLeft[DIF_iframeBeingDragged] += x;
   DIF_pageMouseDownTop[DIF_iframeBeingDragged] += y;
   }
+}
