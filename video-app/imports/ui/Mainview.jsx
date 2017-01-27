@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import '../api/dragiframe.js';
+import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
 
@@ -115,7 +115,13 @@ class Mainview extends Component {
          width="640" 
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
-         
+         <html>
+          <head>
+           <title></title>
+           <script type="text/javascript" src="../api/dragiframe.js"></script>
+          </head>
+         <body onload="addHandle(document.getElementsByTagName('body').item(0), window)" style="cursor: move"></body>
+         </html>
         </iframe>
         </div>
         <ul>
