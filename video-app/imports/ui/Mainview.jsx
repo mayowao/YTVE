@@ -118,7 +118,7 @@ class Mainview extends Component {
          <html>
           <head>
            <title></title>
-           <script type="text/javascript" src="../api/dragiframe.js"></script>
+           
           </head>
          <body onload="addHandle(document.getElementsByTagName('body').item(0), window)" style="cursor: move"></body>
          </html>
