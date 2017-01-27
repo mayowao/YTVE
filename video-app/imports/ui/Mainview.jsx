@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import '../api/dragiframe.js';
+//import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
@@ -134,13 +135,11 @@ class Mainview extends Component {
   }
 }
 
-Mainview.propTypes = {
-  videos: PropTypes.array.isRequired,
-};
+
  
 export default createContainer(() => {
   return {
-    videos: {'Heeeellooo'},
+    //videos: Tasks.find({}).fetch(),
     /*tasks: Iframe.find({}).fetch(),*/
   };
 }, Mainview);
