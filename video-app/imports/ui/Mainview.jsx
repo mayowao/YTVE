@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
  
-import { Iframe } from '../api/iframe.js';
+//import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
  
 // MainView component - represents the Viewing/Editing Secion of our app
@@ -79,6 +79,7 @@ class Mainview extends Component {
       this.setState({value: 'true'});
     }
   }
+ 
   stopVideo() {
     player.stopVideo();
   }
