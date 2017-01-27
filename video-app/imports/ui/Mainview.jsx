@@ -45,6 +45,15 @@ class Mainview extends Component {
   }
  
   renderVideos() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'SXiSVQZLje8',
+      events: {
+        'onReady': {this.onPlayerReady},
+        'onStateChange': {this.onPlayerStateChange}
+      }
+    });
   }
 
   // 4. The API will call this function when the video player is ready.
@@ -95,18 +104,8 @@ class Mainview extends Component {
           {this.renderRelVideos()}
         </ul>
         <div id="player"></div>
-       <script src="https://www.youtube.com/iframe_api">
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'SXiSVQZLje8',
-          events: {
-            'onReady': {this.onPlayerReady},
-            'onStateChange': {this.onPlayerStateChange}
-          }
-        });
-      </script>
-      </div>
+        {this.renderVideos()}
+       </div>
     );
   }
 }
@@ -248,7 +247,7 @@ Mainview.propTypes = {
 export default createContainer(() => {
   return {
     videos: 'Heeeellooo',
-    /*tasks: Iframe.find({}).fetch(),*/
+   
   };
 }, Mainview);
 */
