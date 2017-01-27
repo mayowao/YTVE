@@ -107,8 +107,8 @@ class Mainview extends Component {
     return (
       <div className="vidviewer">        
         <h1>Viewing Videos</h1>
-        <div className="vidscreen">
-        <iframe onLoad="addHandle(document.getElementsByTagName('body').item(0), window)" 
+        <div className="vidscreen" onLoad="addHandle(document.getElementsByTagName('iframe').item(0), window)">
+        <iframe 
          id="ytplayer" 
          type="text/html" 
          width="640" 
