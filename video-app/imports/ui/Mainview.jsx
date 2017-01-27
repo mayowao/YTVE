@@ -116,9 +116,8 @@ class Mainview extends Component {
        <ul>
          {this.renderRelVideos()}
        </ul>
-      <script>
+      <script src="https://www.youtube.com/iframe_api">
          {this.renderVideos()}
-         {this.getVideos()}
       </script>
       </div>
     );
