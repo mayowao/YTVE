@@ -50,8 +50,8 @@ class Mainview extends Component {
       width: '640',
       videoId: 'SXiSVQZLje8',
       events: {
-        'onReady': {this.onPlayerReady},
-        'onStateChange': {this.onPlayerStateChange}
+        'onReady': this.onPlayerReady,
+        'onStateChange': this.onPlayerStateChange
       }
     });
   }
