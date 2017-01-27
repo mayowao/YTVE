@@ -55,13 +55,13 @@ class Mainview extends Component {
       width: '640',
       videoId: 'SXiSVQZLje8',
       events: {
-        onReady: this.onPlayerReady,
-        onStateChange: this.onPlayerStateChange
+        onReady: function (event) {this.onPlayerReady},
+        onStateChange: function (event) {this.onPlayerStateChange}
       }
     });
   }
   
-  player.load();
+  YT.load();
   }
  
                            
