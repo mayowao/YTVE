@@ -50,7 +50,7 @@ class Mainview extends Component {
 
   renderVideos(){
    
-    document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
+    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
    
   onYouTubeIframeAPIReady = function(){
   //renderVideos(function) {
