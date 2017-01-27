@@ -19,7 +19,7 @@ class Mainview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Search',
+      value: 'false',
       autoplay: '1',
       position: '0',
       height: '360',
@@ -30,6 +30,7 @@ class Mainview extends Component {
     this.handleEdits = this.handleEdits.bind(this);
     this.getEdits = this.getEdits.bind(this);
     this.renderEdits = this.renderEdits.bind(this);
+    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
   }
  
   handleEdits(){
@@ -72,11 +73,11 @@ class Mainview extends Component {
       // 5. The API calls this function when the player's state changes.
       //    The function indicates that when playing a video (state=1),
       //    the player should play for six seconds and then stop.
-      var done = false;
+      // var done = false;
       onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
+        if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
           setTimeout(stopVideo, 6000);
-          done = true;
+          this.setState({value: 'true'});
         }
       }
       stopVideo() {
