@@ -71,7 +71,7 @@ class Mainview extends Component {
           <h1>Viewing Videos</h1>
       <div className="vidscreen">
        <iframe id="ytplayer" type="text/html" width="640" height="360"
-       src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0frameborder=0">
+       src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
        </iframe>
       </div>
        <ul>
