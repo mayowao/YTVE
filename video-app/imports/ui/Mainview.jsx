@@ -60,6 +60,8 @@ class Mainview extends Component {
       }
     });
   }
+  
+  YT.load();
   }
  
                            
