@@ -47,7 +47,7 @@ class Mainview extends Component {
   }
 
   renderVideos(){
-   return[
+   
   onYouTubeIframeAPIReady = function(){
   //renderVideos(function) {
     player = new YT.Player('player', {
@@ -59,7 +59,7 @@ class Mainview extends Component {
         onStateChange: this.onPlayerStateChange
       }
     });
-  }]
+  }
   }
  
                            
