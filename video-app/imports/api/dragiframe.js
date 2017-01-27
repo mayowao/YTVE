@@ -11,7 +11,7 @@
  * 
  */
 
-export default class Dragiframe {
+export default class Dragiframe() {
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
