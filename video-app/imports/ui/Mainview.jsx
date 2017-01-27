@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import '../api/dragiframe.js';
-//import '../api/youtubedata.js';
+import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
@@ -95,14 +95,6 @@ class Mainview extends Component {
   stopVideo() {
     player.stopVideo();
   }
-
- 
-  //Display Related Videos
-  renderRelVideos() {
-    return this.getRelVideos().map((vid) => (
-      <Displayvideo key={vid._id} vid={vid} />
-    ));
-  }
  
   //Displaying the comments
   getComments(){
@@ -125,9 +117,6 @@ class Mainview extends Component {
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
         </iframe>
         </div>
-        <ul>
-          {this.renderRelVideos()}
-        </ul>
         <div id="player1"></div>
         {this.renderVideos()}
        </div>
@@ -135,11 +124,32 @@ class Mainview extends Component {
   }
 }
 
+class Relview extends Component {
+ 
+ //Display Related Videos
+  renderRelVideos() {
+    return this.props.videos.map((vid) => (
+      <Displayvideo key={vid._id} vid={vid} />
+    ));
+  }
+ 
+ render(){
+  return (
+     <ul>
+       {this.renderRelVideos()}
+     </ul>
+   )
+ }
+}
+
+Relview.propTypes = {
+  videos: PropTypes.array.isRequired,
+};
 
  
 export default createContainer(() => {
   return {
-    videos: 'Heeellooo',
+    videos: ,
     /*tasks: Iframe.find({}).fetch(),*/
   };
 }, Mainview);
