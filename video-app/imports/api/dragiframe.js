@@ -10,8 +10,6 @@
  * your site. Copy the files locally to your server instead.
  * 
  */
-
-export default class Dragiframe() {
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -25,6 +23,7 @@ var DIF_handles = new Object();
 var DIF_highestZIndex=99;
 var DIF_raiseSelectedIframe=false;
 var DIF_allowDragOffScreen=false;
+export default class Dragiframe {
 
 // Set to true to always raise the dragged iframe to top zIndex
 function bringSelectedIframeToTop(val) {
