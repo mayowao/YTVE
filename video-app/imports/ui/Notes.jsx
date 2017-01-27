@@ -84,4 +84,3 @@ export default class Mainview extends Component {
     );
   }
 }
-
