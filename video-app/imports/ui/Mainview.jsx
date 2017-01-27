@@ -58,10 +58,10 @@ class Mainview extends Component {
       height: '390',
       width: '640',
       videoId: 'SXiSVQZLje8',
-      playerVars: { 'autoplay': 1 },
+      //playerVars: { 'autoplay': 1 },
       events: {
-        onReady: function (event) {this.onPlayerReady},
-        onStateChange: function (event) {this.onPlayerStateChange}
+        onReady: this.onPlayerReady,
+        onStateChange: this.onPlayerStateChange
       }
     });
   }
@@ -82,7 +82,7 @@ class Mainview extends Component {
   // var done = false;
   onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(function(){this.stopVideo}, 6000);
+      setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
