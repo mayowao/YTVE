@@ -20,10 +20,6 @@ class Mainview extends Component {
     super(props);
     this.state = {
       value: 'false',
-      autoplay: '1',
-      position: '0',
-      height: '360',
-      width: '420',
       pauses: '6000'      
     };
 
