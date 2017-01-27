@@ -26,7 +26,6 @@ var DIF_highestZIndex=99;
 var DIF_raiseSelectedIframe=false;
 var DIF_allowDragOffScreen=false;
 
-class Dragiframe {
 // Set to true to always raise the dragged iframe to top zIndex
 function bringSelectedIframeToTop(val) {
   DIF_raiseSelectedIframe = val;
@@ -242,5 +241,4 @@ function DIF_drag(x,y) {
   }
 };
 
-export default class Dragiframe
 
