@@ -45,8 +45,9 @@ class Mainview extends Component {
   //Displaying The Video
   getVideos(){
   }
- 
-  renderVideos() = function {
+
+  renderVideos(){
+  onYouTubeIframeAPIReady = function(){
   //renderVideos(function) {
     player = new YT.Player('player', {
       height: '390',
@@ -58,6 +59,9 @@ class Mainview extends Component {
       }
     });
   }
+  }
+ 
+                           
 
   // 4. The API will call this function when the video player is ready.
   onPlayerReady(event) {
