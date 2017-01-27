@@ -77,7 +77,7 @@ class Mainview extends Component {
   // var done = false;
   onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(stopVideo, 6000);
+      setTimeout(function(){this.stopVideo}, 6000);
       this.setState({value: 'true'});
     }
   }
