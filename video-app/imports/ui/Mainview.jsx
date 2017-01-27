@@ -149,7 +149,7 @@ Relview.propTypes = {
  
 export default createContainer(() => {
   return {
-    videos: ,
+    videos: Videos.find({}).fetch(),
     /*tasks: Iframe.find({}).fetch(),*/
   };
 }, Mainview);
