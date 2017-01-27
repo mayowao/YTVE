@@ -61,7 +61,7 @@ class Mainview extends Component {
     });
   }
   
-  YT.load();
+  player.load();
   }
  
                            
