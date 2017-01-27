@@ -52,7 +52,7 @@ class Mainview extends Component {
    return [
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-        player = new YT.Player('player', {
+          player = new YT.Player('player', {
           height: '390',
           width: '640',
           videoId: 'SXiSVQZLje8',
@@ -64,24 +64,24 @@ class Mainview extends Component {
     ];
   }
 
-      // 4. The API will call this function when the video player is ready.
-      onPlayerReady(event) {
-        event.target.playVideo();
-      }
+  // 4. The API will call this function when the video player is ready.
+  onPlayerReady(event) {
+    event.target.playVideo();
+  }
 
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      // var done = false;
-      onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-          setTimeout(stopVideo, 6000);
-          this.setState({value: 'true'});
-        }
-      }
-      stopVideo() {
-        player.stopVideo();
-      }
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  // var done = false;
+  onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
+      setTimeout(stopVideo, 6000);
+      this.setState({value: 'true'});
+    }
+  }
+  stopVideo() {
+    player.stopVideo();
+  }
 
  
   //Display Related Videos
@@ -110,6 +110,7 @@ class Mainview extends Component {
        <ul>
          {this.renderRelVideos()}
        </ul>
+      <div id="player"></div>
       <script src="https://www.youtube.com/iframe_api">
          {this.renderVideos()}
       </script>
