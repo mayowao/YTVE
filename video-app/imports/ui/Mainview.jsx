@@ -84,7 +84,7 @@ class Mainview extends Component {
   }
  
   stopVideo() {
-    player1.stopVideo();
+    player.stopVideo();
   }
 
  
