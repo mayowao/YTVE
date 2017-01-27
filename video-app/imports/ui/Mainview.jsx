@@ -29,7 +29,7 @@ class Mainview extends Component {
 
     this.handleEdits = this.handleEdits.bind(this);
     this.getEdits = this.getEdits.bind(this);
-    this.renderEdits = this.renderEdits.bind(this);
+    this.renderVideos = this.renderVideos.bind(this);
     this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
   }
  
@@ -52,6 +52,7 @@ class Mainview extends Component {
    return [
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
+     <script src="https://www.youtube.com/iframe_api">
         player = new YT.Player('player', {
           height: '390',
           width: '640',
@@ -60,7 +61,8 @@ class Mainview extends Component {
             'onReady': this.onPlayerReady,
             'onStateChange': this.onPlayerStateChange
           }
-        })
+        });
+      </script>
     ];
   }
 
@@ -102,19 +104,17 @@ class Mainview extends Component {
   render() {
     return (
       <div className="vidviewer">        
-          <h1>Viewing Videos</h1>
-      <div className="vidscreen">
-       <iframe id="ytplayer" type="text/html" width="640" height="360"
-       src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
-       </iframe>
-      </div>
-       <ul>
-         {this.renderRelVideos()}
-       </ul>
-      <div id="player"></div>
-      <script src="https://www.youtube.com/iframe_api">
-         {this.renderVideos()}
-      </script>
+        <h1>Viewing Videos</h1>
+        <div className="vidscreen">
+        <iframe id="ytplayer" type="text/html" width="640" height="360"
+        src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
+        </iframe>
+        </div>
+        <ul>
+          {this.renderRelVideos()}
+        </ul>
+        <div id="player"></div>
+        {this.renderVideos()}
       </div>
     );
   }
