@@ -116,7 +116,10 @@ class Mainview extends Component {
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
          <html>
-          <head></head>
+          <head>
+           <title></title>
+           <script type="text/javascript" src="../api/dragiframe.js"></script>
+          </head>
          <body onload="addHandle(document.getElementsByTagName('body').item(0), window)" style="cursor: move"></body>
          </html>
         </iframe>
