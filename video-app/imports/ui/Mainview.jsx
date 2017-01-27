@@ -72,7 +72,7 @@ export default class Mainview extends Component {
        <iframe id="ytplayer" type="text/html" width="640" height="360"
        src="https://www.youtube.com/embed/vJoie-znJI8?
        enablejsi=1&
-       autoplay=this.state.autoplay&
+       autoplay=1&
        rel=0"
        frameborder="0"></iframe>
       </div>
