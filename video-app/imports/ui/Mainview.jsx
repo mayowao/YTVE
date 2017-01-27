@@ -31,6 +31,8 @@ class Mainview extends Component {
     this.getEdits = this.getEdits.bind(this);
     this.renderVideos = this.renderVideos.bind(this);
     this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
+    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
+    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
   }
  
   handleEdits(){
@@ -60,8 +62,8 @@ class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        onReady: this.onPlayerReady,
-        onStateChange: this.onPlayerStateChange
+        'onReady': this.onPlayerReady,
+        'onStateChange': this.onPlayerStateChange
       }
     });
   }
