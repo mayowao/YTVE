@@ -49,10 +49,10 @@ class Mainview extends Component {
   }
  
   renderVideos() {
-   return [
+   //return [
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-          player = new YT.Player('player', {
+        player = new YT.Player('player', {
           height: '390',
           width: '640',
           videoId: 'SXiSVQZLje8',
@@ -60,8 +60,8 @@ class Mainview extends Component {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
           }
-          });
-    ]
+        });
+    //]
   }
 
       // 4. The API will call this function when the video player is ready.
