@@ -62,11 +62,8 @@ class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        'onReady': function(event){
-          event.target.playVideo();
-          console.log(this.state.value);
-        },
-        //'onStateChange': 
+        'onReady': this.onPlayerReady,
+        'onStateChange': this.onPlayerStateChange 
       }
     });
   }
@@ -79,6 +76,7 @@ class Mainview extends Component {
 
   // 4. The API will call this function when the video player is ready.
   onPlayerReady(event) {
+    console.log(this.state.value);
     event.target.playVideo();
   }
 
