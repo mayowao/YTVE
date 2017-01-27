@@ -46,15 +46,16 @@ class Mainview extends Component {
 
   //Displaying The Video
   getVideos(){
-   tag = document.createElement('script');
+    return[
+      tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";
       firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-   
+   ];
   }
  
   renderVideos() {
-   //return [
+   return [
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
         player = new YT.Player('player', {
@@ -66,7 +67,7 @@ class Mainview extends Component {
             'onStateChange': onPlayerStateChange
           }
         });
-    //]
+    ];
   }
 
       // 4. The API will call this function when the video player is ready.
@@ -115,12 +116,10 @@ class Mainview extends Component {
        <ul>
          {this.renderRelVideos()}
        </ul>
-      <div className="videoscreene">
+      <script>
          {this.renderVideos()}
-      </div>
-      <div className="scripts">
-       {this.getVideos()}
-      </div>
+         {this.getVideos()}
+      </script>
       </div>
     );
   }
