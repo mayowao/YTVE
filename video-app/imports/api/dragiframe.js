@@ -239,6 +239,6 @@ function DIF_drag(x,y) {
   DIF_pageMouseDownLeft[DIF_iframeBeingDragged] += x;
   DIF_pageMouseDownTop[DIF_iframeBeingDragged] += y;
   }
-};
+
 
 
