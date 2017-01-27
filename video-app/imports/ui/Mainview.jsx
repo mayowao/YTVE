@@ -74,7 +74,7 @@ class Mainview extends Component {
                            
 
   // 4. The API will call this function when the video player is ready.
-  onPlayerReady(event) {
+  onPlayerReady = function(event) {
     event.target.playVideo();
   }
 
@@ -82,14 +82,14 @@ class Mainview extends Component {
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   // var done = false;
-  onPlayerStateChange(event) {
+  onPlayerStateChange = function(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
       setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
  
-  stopVideo() {
+  stopVideo = function() {
     player.stopVideo();
   }
 
