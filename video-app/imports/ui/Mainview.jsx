@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import '../api/dragiframe.js';
-import '../api/youtubedata.js';
+//import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
@@ -11,7 +11,7 @@ import Displayvideo from './Displayvideo.jsx';
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
-class Mainview extends Component {
+export default class Mainview extends Component {
   getRelVideos() {
     return [
       { _id: 1, text: 'This is related video 1' },
@@ -103,6 +103,7 @@ class Mainview extends Component {
   renderComments(){
   }
  
+  //Create the Video Screens via HTML
   render() {
     return (
       <div className="vidviewer">        
@@ -123,35 +124,3 @@ class Mainview extends Component {
     );
   }
 }
-
-class Relview extends Component {
- 
- //Display Related Videos
-  renderRelVideos() {
-    return this.props.videos.map((vid) => (
-      <Displayvideo key={vid._id} vid={vid} />
-    ));
-  }
- 
- render(){
-  return (
-     <ul>
-       {this.renderRelVideos()}
-     </ul>
-   )
- }
-}
-
-Relview.propTypes = {
-  videos: PropTypes.array.isRequired,
-};
-
- 
-export default createContainer(() => {
-  return {
-    videos: Videos.find({}).fetch(),
-    /*tasks: Iframe.find({}).fetch(),*/
-  };
-}, Relview);
-
-
