@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
-import { HTTP } from 'meteor/http'
+import { HTTP } from 'meteor/http';
 
-var ytimport = HTTP.call("GET", "https://www.youtube.com/iframe_api")
+var ytimport = HTTP.call("GET", "https://www.youtube.com/iframe_api");
 
 import '../api/dragiframe.js';
-import ytimport 
+import ytimport; 
 //import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
