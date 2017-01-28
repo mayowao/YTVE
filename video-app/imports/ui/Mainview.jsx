@@ -102,14 +102,7 @@ export default class Mainview extends Component {
  
   YT.load();
   console.log(this.state.value);
-  
-  // Get the <a> element with id="myAnchor"
-  var makeDrag = document.getElementById("player1").contentDocument.body;  
 
-  // If the <a> element has a target attribute, set the value to "_self"
-  if (makeDrag.hasAttribute("onLoad")) {     
-    console.log('isworking');
-    x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
   }
   
   /*componentDidMount = function() {
@@ -161,6 +154,12 @@ export default class Mainview extends Component {
   }
 }
 
+ var makeDrag = document.getElementById("player1").contentDocument.body;  
+
+  // If the <a> element has a target attribute, set the value to "_self"
+  if (makeDrag.hasAttribute("onLoad")) {     
+    console.log('isworking');
+    x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
 
 
 
