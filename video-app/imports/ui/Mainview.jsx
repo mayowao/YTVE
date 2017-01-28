@@ -14,9 +14,6 @@ ytiframe.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 
-var makeDrag = document.getElementById('player1');
-makeDrag.setAttribute('frameborder','1');
-
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
@@ -151,4 +148,8 @@ export default class Mainview extends Component {
     );
   }
 }
+
+var makeDrag = document.getElementById('player1');
+makeDrag.setAttribute('frameborder','1');
+
 
