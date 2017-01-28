@@ -14,6 +14,9 @@ ytiframe.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 
+var makeDrag = document.getElementByID('player1');
+makeDrag.setAttribute('frameborder','1');
+
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
@@ -103,7 +106,7 @@ export default class Mainview extends Component {
   YT.load();
   console.log(this.state.value);
   
-  componentDidMount = function() {
+  /*componentDidMount = function() {
     var frameBody = ReactDOM.findDOMNode(this).contentDocument.iframe
     frameBody.setAttribute('src','../imports/api/dragiframe.js');
     var makeDrag = ReactDOM.findDOMNode(this).contentDocument.body;
@@ -114,7 +117,7 @@ export default class Mainview extends Component {
         //this.updateIFrameContents();
     };
   
-  var makeItDrag = componentDidMount();
+  var makeItDrag = componentDidMount();*/
  
   //document.setAttribute('src', '../imports/api/dragiframe.js')
   }
