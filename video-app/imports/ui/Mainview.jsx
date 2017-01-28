@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import { Dragiframe } from '../api/dragiframe.js';
+import '../api/dragiframe.js';
 //import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
