@@ -69,7 +69,7 @@ export default class Mainview extends Component {
   // var done = false;
   onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(this.stopVideo, 6000);
+      setTimeout(stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
@@ -94,9 +94,9 @@ export default class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        onReady: this.onPlayerReady,
-        onStateChange: this.onPlayerStateChange, 
-        onError: this.onErrorMes
+        onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange, 
+        onError: onErrorMes
       }
     });
   }
