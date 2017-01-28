@@ -114,8 +114,8 @@ export default class Mainview extends Component {
     /*  if (getFrame.hasAttribute("onLoad")) {     
       console.log('isworking');
       x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
-      }
-    }*/
+      }*/
+    }
     
     var goDrag = makeItDrag();
     
