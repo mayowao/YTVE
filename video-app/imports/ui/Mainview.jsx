@@ -106,7 +106,7 @@ export default class Mainview extends Component {
   componentDidMount = function() {
     var frameBody = ReactDOM.findDOMNode(this.refs.players).setAttribute('src','../imports/api/dragiframe.js');
     var makeDrag = ReactDOM.findDOMNode(this.refs.players).contentDocument.body;
-    makeDrag.setAttribute('onLoad','"addHandle(document.getElementById('toolbar'), window)"');
+    makeDrag.setAttribute('onLoad',"addHandle(document.getElementById('toolbar'), window)");
     }
 
   componentDidUpdate = function() {
