@@ -147,10 +147,11 @@ export default class Mainview extends Component {
         </div>
         <div id="player1" ref="players">
           <script type="text/javascript" src="../imports/api/dragiframe.js">
-           {this.makeDrag()}
+           
           </script>
         </div>
         {this.renderVideos()}
+        {this.makeDrag()}
        </div>
     );
   }
