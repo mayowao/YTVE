@@ -107,7 +107,7 @@ export default class Mainview extends Component {
  
   makeDrag(){
     makeItDrag = function(){
-      var makeDrag = document.getElementById("player1").contentDocument.body;  
+      var makeDrag = document.getElementById('player1').contentDocument.body;  
 
     // If the <a> element has a target attribute, set the value to "_self"
       if (makeDrag.hasAttribute("onLoad")) {     
@@ -120,22 +120,7 @@ export default class Mainview extends Component {
     
   }
   
-  /*componentDidMount = function() {
-    var frameBody = ReactDOM.findDOMNode(this).contentDocument.iframe
-    frameBody.setAttribute('src','../imports/api/dragiframe.js');
-    var makeDrag = ReactDOM.findDOMNode(this).contentDocument.body;
-    makeDrag.setAttribute('onLoad',"addHandle(document.getElementById('toolbar'), window)");
-    };
-
-  componentDidUpdate = function() {
-        //this.updateIFrameContents();
-    };
   
-  var makeItDrag = componentDidMount();*/
- 
-  //document.setAttribute('src', '../imports/api/dragiframe.js')
-  
-
   //Displaying the comments
   getComments(){
   }
