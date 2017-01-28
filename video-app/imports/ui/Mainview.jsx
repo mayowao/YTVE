@@ -111,7 +111,7 @@ export default class Mainview extends Component {
       console.log(getFrame); 
 
     // If the <a> element has a target attribute, set the value to "_self"
-      if (makeDrag.hasAttribute("onLoad")) {     
+      if (getFrame.hasAttribute("onLoad")) {     
       console.log('isworking');
       x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
       }
