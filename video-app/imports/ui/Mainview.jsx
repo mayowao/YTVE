@@ -108,7 +108,7 @@ export default class Mainview extends Component {
     return (
       <div className="vidviewer">        
         <h1>Viewing Videos</h1>
-        <div className="vidscreen" onLoad="addHandle(document.getElementsByTagName('iframe').item(0), window)">
+        <div className="vidscreen">
         <iframe 
          name="ytplayer"
          id="ytplayer" 
@@ -116,6 +116,7 @@ export default class Mainview extends Component {
          width="640" 
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
+           document.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementsByTagName('body').item(0), window)");
         </iframe>
         </div>
         <div id="player1"></div>
