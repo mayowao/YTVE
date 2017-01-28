@@ -12,6 +12,11 @@ import ytimport;
 //import { Iframe } from '../api/iframe.js';
 import Displayvideo from './Displayvideo.jsx';
 
+var ytiframe = document.createElement('script');
+ytiframe.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
