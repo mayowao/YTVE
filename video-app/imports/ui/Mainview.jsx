@@ -94,9 +94,9 @@ export default class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        onReady: onPlayerReady,
-        onStateChange: onPlayerStateChange, 
-        onError: onErrorMes
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange, 
+        'onError': onErrorMes
       }
     });
   }
