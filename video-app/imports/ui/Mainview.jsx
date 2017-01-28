@@ -104,6 +104,21 @@ export default class Mainview extends Component {
   console.log(this.state.value);
 
   }
+ 
+  makeDrag(){
+    makeItDrag = function(){
+      var makeDrag = document.getElementById("player1").contentDocument.body;  
+
+    // If the <a> element has a target attribute, set the value to "_self"
+      if (makeDrag.hasAttribute("onLoad")) {     
+      console.log('isworking');
+      x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
+      }
+    }
+    
+    var goDrag = makeItDrag();
+    
+  }
   
   /*componentDidMount = function() {
     var frameBody = ReactDOM.findDOMNode(this).contentDocument.iframe
@@ -146,20 +161,12 @@ export default class Mainview extends Component {
         </iframe>
         </div>
         <div id="player1" ref="players">
-          <script type="text/javascript" src="../imports/api/dragiframe.js"></script>
+          <script type="text/javascript" src="../imports/api/dragiframe.js">
+           {this.makeDrag()}
+          </script>
         </div>
         {this.renderVideos()}
        </div>
     );
   }
 }
-
- var makeDrag = document.getElementById("player1").contentDocument.body;  
-
-  // If the <a> element has a target attribute, set the value to "_self"
-  if (makeDrag.hasAttribute("onLoad")) {     
-    console.log('isworking');
-    x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
-
-
-
