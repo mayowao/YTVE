@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import '../api/youtubedata.js';
+//import '../api/youtubedata.js';
 
 class Relview extends Component {
  
