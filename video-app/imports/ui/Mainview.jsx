@@ -57,8 +57,30 @@ export default class Mainview extends Component {
   getVideos(){
   }
  
- // 4. The API will call this function when the video player is ready.
-  onPlayerReady(event) {
+ 
+
+  //renderVideos(){
+   
+    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
+
+ renderVideos(){
+  onYouTubeIframeAPIReady = function(){
+  //renderVideos(function) {
+    player = new YT.Player('player1', {
+      height: '390',
+      width: '640',
+      videoId: 'SXiSVQZLje8',
+      //playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange, 
+        'onError': onErrorMes
+      }
+    });
+  }
+  
+  // 4. The API will call this function when the video player is ready.
+  onPlayerReady = function(event) {
     console.log(this.state.value);
     event.target.playVideo();
   }
@@ -67,41 +89,22 @@ export default class Mainview extends Component {
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   // var done = false;
-  onPlayerStateChange(event) {
+  onPlayerStateChange = function(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(this.stopVideo, 6000);
+      setTimeout(stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
  
-  stopVideo() {
+  stopVideo = function() {
     player.stopVideo();
   }
   
-  onErrorMes(event){
+  onErrorMes = function(event){
     console.log('Error loading youtube video');
   } 
-
-  //renderVideos(){
-   
-    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
-   
-  onYouTubeIframeAPIReady(){
-  //renderVideos(function) {
-    player = new YT.Player('player1', {
-      height: '390',
-      width: '640',
-      videoId: 'SXiSVQZLje8',
-      //playerVars: { 'autoplay': 1 },
-      events: {
-        'onReady': this.onPlayerReady,
-        'onStateChange': this.onPlayerStateChange, 
-        'onError': this.onErrorMes
-      }
-    });
-  }
   
- renderVideos(){
+ 
   YT.load();
   console.log(this.state.value);
   }
@@ -131,7 +134,6 @@ export default class Mainview extends Component {
         </iframe>
         </div>
         <div id="player1"></div>
-        {this.onYouTubeIframeAPIReady()}
         {this.renderVideos()}
        </div>
     );
