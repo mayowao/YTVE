@@ -105,23 +105,6 @@ export default class Mainview extends Component {
 
  }
  
-  makeDrag(){
-    makeItDrag = function(){
-      var getFrame = this.refs.players;
-      console.log(getFrame); 
-
-    // If the <a> element has a target attribute, set the value to "_self"
-    /*  if (getFrame.hasAttribute("onLoad")) {     
-      console.log('isworking');
-      x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
-      }*/
-    }
-    
-    var goDrag = makeItDrag();
-    
-  }
-  
-  
   //Displaying the comments
   getComments(){
   }
@@ -152,8 +135,22 @@ export default class Mainview extends Component {
           </script>
         </div>
         {this.renderVideos()}
-        {this.makeDrag()}
+        
        </div>
     );
   }
 }
+
+makeItDrag = function(){
+      var getFrame = this.refs.players;
+      console.log(getFrame); 
+
+    // If the <a> element has a target attribute, set the value to "_self"
+    /*  if (getFrame.hasAttribute("onLoad")) {     
+      console.log('isworking');
+      x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
+      }*/
+    }
+    
+    var goDrag = makeItDrag(); 
+ 
