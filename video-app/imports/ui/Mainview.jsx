@@ -107,7 +107,7 @@ export default class Mainview extends Component {
  
   makeDrag(){
     makeItDrag = function(){
-      var makeDrag = document.getElementById("player1").body;  
+      var makeDrag = document.getElementById("player1").contentDocument.body;  
 
     // If the <a> element has a target attribute, set the value to "_self"
       if (makeDrag.hasAttribute("onLoad")) {     
