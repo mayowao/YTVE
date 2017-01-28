@@ -37,9 +37,9 @@ export default class Mainview extends Component {
     this.handleEdits = this.handleEdits.bind(this);
     this.getEdits = this.getEdits.bind(this);
     this.renderVideos = this.renderVideos.bind(this);
-    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
-    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
-    this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
+    //this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
+    //this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
+    //this.onPlayerStateChange = this.onPlayerStateChange.bind(this);
   }
  
   handleEdits(){
