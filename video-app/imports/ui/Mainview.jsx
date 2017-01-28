@@ -77,7 +77,7 @@ export default class Mainview extends Component {
   onPlayerStateChange = function(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
       setTimeout(stopVideo, 6000);
-      this.setState({value: 'true'});
+      done = true;
     }
   }
  
