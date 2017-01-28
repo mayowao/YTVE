@@ -107,7 +107,7 @@ export default class Mainview extends Component {
  
   makeDrag(){
     makeItDrag = function(){
-      var getFrame = document.getElementById("ytplayer");
+      var getFrame = this.refs.players;
       console.log(getFrame); 
 
     // If the <a> element has a target attribute, set the value to "_self"
