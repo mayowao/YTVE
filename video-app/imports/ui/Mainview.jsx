@@ -14,7 +14,7 @@ ytiframe.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 
-var makeDrag = document.getElementByID('player1');
+var makeDrag = document.getElementById('player1');
 makeDrag.setAttribute('frameborder','1');
 
 //var renderVideos = require('youtube-iframe');
