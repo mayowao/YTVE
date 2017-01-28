@@ -103,6 +103,8 @@ export default class Mainview extends Component {
   YT.load();
   console.log(this.state.value);
   
+  ReactDOM.findDOMNode(this.refs.players).contentDocument.setAttribute(src,'../imports/api/dragiframe.js');
+  
   //document.setAttribute('src', '../imports/api/dragiframe.js')
   }
 
@@ -126,7 +128,8 @@ export default class Mainview extends Component {
          type="text/html" 
          width="640" 
          height="360"
-         src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
+         src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0"
+         ref="players">
         </iframe>
         </div>
         <div id="player1" ref="players"></div>
