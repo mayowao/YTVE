@@ -103,7 +103,7 @@ export default class Mainview extends Component {
   YT.load();
   console.log(this.state.value);
 
-  }
+ }
  
   makeDrag(){
     makeItDrag = function(){
@@ -134,7 +134,7 @@ export default class Mainview extends Component {
   var makeItDrag = componentDidMount();*/
  
   //document.setAttribute('src', '../imports/api/dragiframe.js')
-  }
+  
 
   //Displaying the comments
   getComments(){
