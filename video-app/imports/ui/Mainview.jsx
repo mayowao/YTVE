@@ -103,17 +103,18 @@ export default class Mainview extends Component {
   YT.load();
   console.log(this.state.value);
   
-  //document.setAttribute('src', '../imports/api/dragiframe.js')
-  }
-
- componentDidMount: function() {
+  componentDidMount = function() {
         var frameBody = ReactDOM.findDOMNode(this.refs.players).setAttribute('src','../imports/api/dragiframe.js');
     }
 
- componentDidUpdate: function() {
+  componentDidUpdate = function() {
         //this.updateIFrameContents();
     }
  
+  
+  //document.setAttribute('src', '../imports/api/dragiframe.js')
+  }
+
   //Displaying the comments
   getComments(){
   }
