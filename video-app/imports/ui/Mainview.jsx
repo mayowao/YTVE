@@ -69,7 +69,7 @@ export default class Mainview extends Component {
   // var done = false;
   onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(stopVideo, 6000);
+      setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
@@ -82,11 +82,11 @@ export default class Mainview extends Component {
     console.log('Error loading youtube video');
   } 
 
-  renderVideos(){
+  //renderVideos(){
    
     //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
    
-  onYouTubeIframeAPIReady = function(){
+  onYouTubeIframeAPIReady(){
   //renderVideos(function) {
     player = new YT.Player('player1', {
       height: '390',
@@ -94,13 +94,14 @@ export default class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange, 
-        'onError': onErrorMes
+        'onReady': this.onPlayerReady,
+        'onStateChange': this.onPlayerStateChange, 
+        'onError': this.onErrorMes
       }
     });
   }
   
+ renderVideos(){
   YT.load();
   console.log(this.state.value);
   }
@@ -130,6 +131,7 @@ export default class Mainview extends Component {
         </iframe>
         </div>
         <div id="player1"></div>
+        {this.onYouTubeIframeAPIReady()}
         {this.renderVideos()}
        </div>
     );
