@@ -70,7 +70,7 @@ export default class Mainview extends Component {
       //playerVars: { 'autoplay': 1 },
       events: {
         'onReady': this.onPlayerReady,
-        'onStateChange': this.onPlayerStateChange 
+        'onStateChange': this.onPlayerStateChange, 
         'onError': this.onErrorMes
       }
     });
