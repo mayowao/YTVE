@@ -56,12 +56,8 @@ export default class Mainview extends Component {
   //Displaying The Video
   getVideos(){
   }
-
-  renderVideos(){
-   
-    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
-
-  // 4. The API will call this function when the video player is ready.
+ 
+ // 4. The API will call this function when the video player is ready.
   onPlayerReady(event) {
     console.log(this.state.value);
     event.target.playVideo();
@@ -85,6 +81,10 @@ export default class Mainview extends Component {
   onErrorMes(event){
     console.log('Error loading youtube video');
   } 
+
+  renderVideos(){
+   
+    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
    
   onYouTubeIframeAPIReady = function(){
   //renderVideos(function) {
