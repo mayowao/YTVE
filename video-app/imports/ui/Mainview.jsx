@@ -64,21 +64,6 @@ export default class Mainview extends Component {
     //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
 
  renderVideos(){
-  onYouTubeIframeAPIReady = function(){
-  //renderVideos(function) {
-    player = new YT.Player('player1', {
-      height: '390',
-      width: '640',
-      videoId: 'SXiSVQZLje8',
-      //playerVars: { 'autoplay': 1 },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange, 
-        'onError': onErrorMes
-      }
-    });
-  }
-  
   // 4. The API will call this function when the video player is ready.
   onPlayerReady = function(event) {
     console.log(this.state.value);
@@ -102,8 +87,22 @@ export default class Mainview extends Component {
   
   onErrorMes = function(event){
     console.log('Error loading youtube video');
-  } 
+  }
   
+  onYouTubeIframeAPIReady = function(){
+  //renderVideos(function) {
+    player = new YT.Player('player1', {
+      height: '390',
+      width: '640',
+      videoId: 'SXiSVQZLje8',
+      //playerVars: { 'autoplay': 1 },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange, 
+        'onError': onErrorMes
+      }
+    });
+  } 
  
   YT.load();
   console.log(this.state.value);
