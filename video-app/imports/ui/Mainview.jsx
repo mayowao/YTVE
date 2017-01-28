@@ -69,8 +69,9 @@ export default class Mainview extends Component {
       videoId: 'SXiSVQZLje8',
       //playerVars: { 'autoplay': 1 },
       events: {
-        onReady: this.onPlayerReady,
-        onStateChange: this.onPlayerStateChange 
+        'onReady': this.onPlayerReady,
+        'onStateChange': this.onPlayerStateChange 
+        'onError': this.onErrorMes
       }
     });
   }
@@ -79,10 +80,11 @@ export default class Mainview extends Component {
   console.log(this.state.value);
   }
  
+ 
                            
 
   // 4. The API will call this function when the video player is ready.
-  onPlayerReady(event) {
+  onPlayerReady = function(event) {
     console.log(this.state.value);
     event.target.playVideo();
   }
@@ -91,15 +93,19 @@ export default class Mainview extends Component {
   //    The function indicates that when playing a video (state=1),
   //    the player should play for six seconds and then stop.
   // var done = false;
-  onPlayerStateChange(event) {
+  onPlayerStateChange = function(event) {
     if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
       setTimeout(this.stopVideo, 6000);
       this.setState({value: 'true'});
     }
   }
  
-  stopVideo() {
+  stopVideo = function() {
     player.stopVideo();
+  }
+  
+  onErrorMes = function(){
+    console.log('Error loading youtube video');
   }
  
   //Displaying the comments
