@@ -56,11 +56,7 @@ export default class Mainview extends Component {
   //Displaying The Video
   getVideos(){
   }
- 
- 
 
-  //renderVideos(){
-   
     //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
 
  renderVideos(){
@@ -106,6 +102,8 @@ export default class Mainview extends Component {
  
   YT.load();
   console.log(this.state.value);
+  
+  //document.setAttribute('src', '../imports/api/dragiframe.js')
   }
 
  
@@ -129,10 +127,9 @@ export default class Mainview extends Component {
          width="640" 
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0">
-           document.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementsByTagName('body').item(0), window)");
         </iframe>
         </div>
-        <div id="player1"></div>
+        <div id="player1" ref="players"></div>
         {this.renderVideos()}
        </div>
     );
