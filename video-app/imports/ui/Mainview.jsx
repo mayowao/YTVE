@@ -60,6 +60,31 @@ export default class Mainview extends Component {
   renderVideos(){
    
     //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
+
+  // 4. The API will call this function when the video player is ready.
+  onPlayerReady(event) {
+    console.log(this.state.value);
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  // var done = false;
+  onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
+      setTimeout(this.stopVideo, 6000);
+      this.setState({value: 'true'});
+    }
+  }
+ 
+  stopVideo() {
+    player.stopVideo();
+  }
+  
+  onErrorMes(event){
+    console.log('Error loading youtube video');
+  } 
    
   onYouTubeIframeAPIReady = function(){
   //renderVideos(function) {
@@ -79,34 +104,7 @@ export default class Mainview extends Component {
   YT.load();
   console.log(this.state.value);
   }
- 
- 
-                           
 
-  // 4. The API will call this function when the video player is ready.
-  onPlayerReady = function(event) {
-    console.log(this.state.value);
-    event.target.playVideo();
-  }
-
-  // 5. The API calls this function when the player's state changes.
-  //    The function indicates that when playing a video (state=1),
-  //    the player should play for six seconds and then stop.
-  // var done = false;
-  onPlayerStateChange = function(event) {
-    if (event.data == YT.PlayerState.PLAYING && !this.state.value) {
-      setTimeout(this.stopVideo, 6000);
-      this.setState({value: 'true'});
-    }
-  }
- 
-  stopVideo = function() {
-    player.stopVideo();
-  }
-  
-  onErrorMes = function(){
-    console.log('Error loading youtube video');
-  }
  
   //Displaying the comments
   getComments(){
