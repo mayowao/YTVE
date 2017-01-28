@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import '../api/dragiframe.js';
+import 'https://www.youtube.com/iframe_api'
 //import '../api/youtubedata.js';
 //import { addHandle } from '../api/dragiframe.js';
 //import { Iframe } from '../api/iframe.js';
