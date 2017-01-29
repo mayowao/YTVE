@@ -49,7 +49,7 @@ export default class Mainview extends Component {
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters 
         autoplay: 1
-      },                        // defaults -> {}
+      }},                        // defaults -> {}
      onReady: 'func',                    // defaults -> noop
      onPlay: 'func',                     // defaults -> noop
      onPause: 'func',                    // defaults -> noop
