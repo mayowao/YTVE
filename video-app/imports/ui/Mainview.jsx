@@ -21,7 +21,7 @@ export default class Mainview extends Component {
  
  componentDidMount(){
    getDrag = function(){
-    var drag = document.getElementsByTagName('iframe').item(0);
+    var drag = document.getElementsByTagName('iframe').getElementById('ytplayer');
     //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
     console.log(drag);
    };
