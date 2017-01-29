@@ -22,7 +22,7 @@ export default class Mainview extends Component {
  componentDidMount(){
    getDrag = function(){
     var drag = document.getElementsByTagName('iframe')[0].contentWindow.document.getElementsByTagName('body');
-    //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
+    drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
     console.log(drag);
    };
    
