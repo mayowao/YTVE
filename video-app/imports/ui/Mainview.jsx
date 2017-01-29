@@ -21,18 +21,7 @@ export default class Mainview extends Component {
  
  componentDidMount(){
    getDrag = function(){
-    var drag = document.getElementsByTagName('iframe').length;
-    //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
-    console.log(drag);
-   };
-   
-   var doDrag = getDrag();
- }
-
- //VideoFormatting
- videoFormat(){
-   getDrag = function(){
-    var drag = document.getElementsByTagName('iframe').length;
+    var drag = document.getElementsByTagName('iframe').item(0);
     //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
     console.log(drag);
    };
