@@ -23,7 +23,7 @@ export default class Mainview extends Component {
  videoFormat(){
    getDrag = function(){
     var drag = document.getElementsByTagName('body');
-    drag.setAttribute('onLoad','addHandle(document.getElementById('toolbar'), window)');
+    drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
     console.log(drag);
    };
    
