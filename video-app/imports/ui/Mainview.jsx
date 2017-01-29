@@ -22,7 +22,7 @@ export default class Mainview extends Component {
  //VideoFormatting
  videoFormat(){
    getDrag = function(){
-    var drag = document.getElementsByTagName('iframe')[1].outerHTML;
+    var drag = document.getElementsByTagName('iframe')[1];
     //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
     console.log(drag);
    };
