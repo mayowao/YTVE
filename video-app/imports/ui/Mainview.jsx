@@ -26,7 +26,7 @@ export default class Mainview extends Component {
     console.log(drag);
    };
    
-   var doDrag = getDrag;
+   var doDrag = getDrag();
  }
 
   getRelVideos() {
