@@ -20,9 +20,10 @@ firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 export default class Mainview extends Component {
  
  //VideoFormatting
- 
- const drag = ReactDOM.findDOMNode(this.refs.players);
-
+ videoFormat(){
+   const drag = ReactDOM.findDOMNode(this.refs.players);
+   console.log(drag);
+ }
 
   getRelVideos() {
     return [
