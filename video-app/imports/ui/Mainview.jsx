@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 import YouTube from 'react-youtube';
+import Draggable from 'react-draggable';
 
 import Displayvideo from './Displayvideo.jsx';
 
@@ -152,11 +153,13 @@ export default class Mainview extends Component {
           
         </div>
         {this.renderVideos()}
+        <Draggable>
         <YouTube
           videoId={this.state.videoId}                  
           id={this.state.id}                       
           className={this.state.className}                
         />
+      </Draggable>
        </div>
     );
   }
