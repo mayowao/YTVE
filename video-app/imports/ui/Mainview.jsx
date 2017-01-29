@@ -14,6 +14,8 @@ ytiframe.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 
+var getDrag = document.getElementById('mainview');
+
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
@@ -21,8 +23,8 @@ export default class Mainview extends Component {
  
  //VideoFormatting
  videoFormat(){
-   const drag = this.refs;
-   console.log(drag);
+   //const drag = this.refs;
+   console.log(getDrag);
  }
 
   getRelVideos() {
