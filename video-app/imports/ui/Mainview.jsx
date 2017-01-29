@@ -21,8 +21,10 @@ export default class Mainview extends Component {
  
  //VideoFormatting
  videoFormat(){
-   //const drag = this.refs;
-   console.log(getDrag);
+   getDrag = function(){
+    var drag = document.getElementsByTagName('body');
+    console.log(drag);
+   }
  }
 
   getRelVideos() {
@@ -131,6 +133,7 @@ export default class Mainview extends Component {
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0"
          ref="players">
+          {this.videoFormat()}
           <script type="text/javascript" src="../imports/api/dragiframe.js"></script>
         </iframe>
         </div>
@@ -140,12 +143,8 @@ export default class Mainview extends Component {
           </script>
         </div>
         {this.renderVideos()}
-        {this.videoFormat()}
+        
        </div>
     );
   }
 } 
-
-var getDrag = document.getElementById('mainview');
-
-
