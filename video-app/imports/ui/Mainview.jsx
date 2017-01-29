@@ -44,7 +44,12 @@ export default class Mainview extends Component {
      videoId: 'SXiSVQZLje8',                  // defaults -> null
      id: '',                       // defaults -> null
      className: 'player2',                // defaults -> null
-     opts: '{}',                        // defaults -> {}
+     opts: {
+      height: '390',
+      width: '640',
+      playerVars: { // https://developers.google.com/youtube/player_parameters 
+        autoplay: 1
+      },                        // defaults -> {}
      onReady: 'func',                    // defaults -> noop
      onPlay: 'func',                     // defaults -> noop
      onPause: 'func',                    // defaults -> noop
@@ -159,7 +164,8 @@ export default class Mainview extends Component {
         <YouTube
           videoId={this.state.videoId}                  
           id={this.state.id}                       
-          className={this.state.className}                
+          className={this.state.className}
+          opts={this.state.opts}
         />
          </div>
       </Draggable>
