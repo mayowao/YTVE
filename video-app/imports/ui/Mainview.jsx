@@ -382,8 +382,7 @@ export default class Mainview extends Component {
          height="360"
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0"
          ref="players">
-          
-        <script type="text/javascript" src="dynamicoptionlist.js"></script>  
+            
         </iframe>
         </div>
         <div id="player1" ref="players">
