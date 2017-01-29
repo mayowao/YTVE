@@ -149,7 +149,7 @@ export default class Mainview extends Component {
       console.log('isworking');
       x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
       }*/
-    }
+  
     
   
  
