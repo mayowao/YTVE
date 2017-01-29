@@ -23,7 +23,7 @@ export default class Mainview extends Component {
    getDrag = function(){
     var drag = document.getElementsByTagName('iframe');
     var dragg = drag[0]
-    var draggg = dragg.contentDocument.body;
+    var draggg = dragg.contentDocument.body.innerHTML;
     console.log(drag);
     console.log(dragg);
     console.log(draggg);
@@ -69,6 +69,7 @@ export default class Mainview extends Component {
 
   //Displaying The Video
   getVideos(){
+    
   }
 
  renderVideos(){
@@ -144,7 +145,7 @@ export default class Mainview extends Component {
         </div>
         <div id="player1" ref="players">
           <script type="text/javascript" src="../imports/api/dragiframe.js">
-           
+           {}
           </script>
         </div>
         {this.renderVideos()}
