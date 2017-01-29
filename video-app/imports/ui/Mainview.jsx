@@ -18,6 +18,12 @@ firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
  
 // MainView component - represents the Viewing/Editing Secion of our app
 export default class Mainview extends Component {
+ 
+ //VideoFormatting
+ 
+ const drag = ReactDOM.findDOMNode(this.refs.players);
+
+
   getRelVideos() {
     return [
       { _id: 1, text: 'This is related video 1' },
@@ -139,18 +145,5 @@ export default class Mainview extends Component {
        </div>
     );
   }
-}
-
-      var getFrame = this.refs.players;
-      console.log(getFrame); 
-
-    // If the <a> element has a target attribute, set the value to "_self"
-    /*  if (getFrame.hasAttribute("onLoad")) {     
-      console.log('isworking');
-      x.setAttribute("onLoad", "addHandle(document.getElementById('toolbar'), window)");
-      }*/
-  
-    
-  
- 
+} 
 
