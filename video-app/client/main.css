@@ -59,3 +59,26 @@
 
 /*-------------------------------------------------------*/
 
+.dragtry {
+    width: 300px;
+    height: 100px;
+    background: #A1DB6A;
+    position: relative;/*parent must have positioning*/
+}
+iframe {
+    border: 0;
+    height: 80px;
+    width: 100%;
+    background: #ddd;
+}
+/*Cover up the entire element (could be limited to just covering the iframe element)*/
+.dragtry:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
