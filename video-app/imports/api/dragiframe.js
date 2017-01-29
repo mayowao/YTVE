@@ -59,16 +59,16 @@ function addHandle(o, win) {
   // Add handlers to child window
   if (typeof(win.DIF_mainHandlersAdded)=="undefined" || !win.DIF_mainHandlersAdded) {
     // This is done in a funky way to make Netscape happy
-    with (win) { 
-      eval("function OnMouseDownHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+topRefStr+".parent.DIF_begindrag(evt, "+topRefStr+") }");
+    var smode = win;  
+      eval("function OnMouseDownHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+smode.topRefStr+".parent.DIF_begindrag(evt, "+smode.topRefStr+") }");
       eval("document.onmousedown = OnMouseDownHandler;");
-      eval("function OnMouseUpHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+topRefStr+".parent.DIF_enddrag(evt, "+topRefStr+") }");
+      eval("function OnMouseUpHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+smode.topRefStr+".parent.DIF_enddrag(evt, "+smode.topRefStr+") }");
       eval("document.onmouseup = OnMouseUpHandler;");
-      eval("function OnMouseMoveHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+topRefStr+".parent.DIF_iframemove(evt, "+topRefStr+") }");
+      eval("function OnMouseMoveHandler(evt) { if(typeof(evt)=='undefined'){evt=event;}"+smode.topRefStr+".parent.DIF_iframemove(evt, "+smode.topRefStr+") }");
       eval("document.onmousemove = OnMouseMoveHandler;");
       win.DIF_handlersAdded = true;
       win.DIF_mainHandlersAdded = true;
-      }
+      
     }
   // Add handler to this window
   if (typeof(window.DIF_handlersAdded)!="undefined" || !window.DIF_handlersAdded) {
