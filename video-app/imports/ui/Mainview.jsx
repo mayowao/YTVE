@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
-import Youtube from 'react-youtube';
+import YouTube from 'react-youtube';
 
 import Displayvideo from './Displayvideo.jsx';
 
