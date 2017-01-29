@@ -23,8 +23,8 @@ export default class Mainview extends Component {
    getDrag = function(){
     var drag = document.getElementsByTagName('iframe');
     var dragg = drag[0]
-    var draggg = dragg.setAtrribute("onload","addHandle(document.getElementsByTagName('body').item(0), window)");
-    var dragggg = dragg.setAtrribute("draggable","true");
+    var draggg = dragg.onload = addHandle(document.getElementsByTagName('body').item(0), window);
+    var dragggg = dragg.draggable = true;
     console.log(drag);
     console.log(dragg);
     console.log(draggg);
