@@ -21,7 +21,7 @@ export default class Mainview extends Component {
  
  //VideoFormatting
  videoFormat(){
-   const drag = this.refs.players;
+   const drag = this.refs;
    console.log(drag);
  }
 
