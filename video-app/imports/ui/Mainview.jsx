@@ -30,7 +30,7 @@ var DIF_pageMouseDownTop = new Object();
 var DIF_handles = new Object();
 var DIF_highestZIndex=99;
 var DIF_raiseSelectedIframe=false;
-var DIF_allowDragOffScreen=false;
+var DIF_allowDragOffScreen=true;
 
 // Set to true to always raise the dragged iframe to top zIndex
 function bringSelectedIframeToTop(val) {
