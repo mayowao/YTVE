@@ -13,8 +13,6 @@
 
 //import React, { Component, PropTypes } from 'react';
 
-export default class Dragiframe {
-   render(){
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
