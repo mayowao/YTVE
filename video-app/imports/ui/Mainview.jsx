@@ -19,6 +19,16 @@ firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);
 // MainView component - represents the Viewing/Editing Secion of our app
 export default class Mainview extends Component {
  
+ componentDidMount(){
+   getDrag = function(){
+    var drag = document.getElementsByTagName('iframe').length;
+    //drag.setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
+    console.log(drag);
+   };
+   
+   var doDrag = getDrag();
+ }
+
  //VideoFormatting
  videoFormat(){
    getDrag = function(){
