@@ -264,9 +264,9 @@ export default class Mainview extends Component {
  componentDidMount(){
    getDrag = function(){
     var drag = document.getElementsByTagName('iframe');
-    var dragg = drag[0].contentWindow.document.body
-    dragg.onload = addHandle(document.getElementsByTagName('body').item(0), window);
-    dragg.draggable = true;
+    var dragg = drag[0].childNodes[1];
+    //dragg.onload = addHandle(document.getElementsByTagName('body').item(0), window);
+    //dragg.draggable = true;
     console.log(drag);
     console.log(dragg);
    };
