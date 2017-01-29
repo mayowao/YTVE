@@ -21,7 +21,7 @@ export default class Mainview extends Component {
  
  //VideoFormatting
  videoFormat(){
-   const drag = ReactDOM.findDOMNode(this.refs.players);
+   const drag = this.refs.players;
    console.log(drag);
  }
 
@@ -63,8 +63,6 @@ export default class Mainview extends Component {
   //Displaying The Video
   getVideos(){
   }
-
-    //document.getElementById('ytplayer').contentDocument.getElementsByTagName('body').setAttribute("onLoad","addHandle(document.getElementById('toolbar'), window)");
 
  renderVideos(){
   // 4. The API will call this function when the video player is ready.
