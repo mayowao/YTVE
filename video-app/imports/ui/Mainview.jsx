@@ -264,7 +264,7 @@ export default class Mainview extends Component {
  componentDidMount(){
    getDrag = function(){
     var drag = document.getElementsByTagName('iframe');
-    var dragg = drag[0].ownerDocument.childNodes[1];
+    var dragg = drag[0];
     //dragg.onload = addHandle(document.getElementsByTagName('body').item(0), window);
     //dragg.draggable = true;
     console.log(drag);
@@ -286,9 +286,9 @@ export default class Mainview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     videoId: 'string',                  // defaults -> null
-     id: 'player2',                       // defaults -> null
-     className: 'string',                // defaults -> null
+     videoId: 'SXiSVQZLje8',                  // defaults -> null
+     id: '',                       // defaults -> null
+     className: 'player2',                // defaults -> null
      opts: '{}',                        // defaults -> {}
      onReady: 'func',                    // defaults -> noop
      onPlay: 'func',                     // defaults -> noop
@@ -399,18 +399,9 @@ export default class Mainview extends Component {
         </div>
         {this.renderVideos()}
         <YouTube
-          videoId={this.state.videoId}                  // defaults -> null
-          id={this.state.id}                       // defaults -> null
-          className={this.state.className}                // defaults -> null
-          opts={this.state.opts}                        // defaults -> {}
-          onReady={this.state.onReady}                    // defaults -> noop
-          onPlay={this.state.onPlay}                     // defaults -> noop
-          onPause={this.state.onPause}                    // defaults -> noop
-          onEnd={this.state.onEnd}                      // defaults -> noop
-          onError={this.state.onError}                    // defaults -> noop
-          onStateChange={this.state.onStateChange}              // defaults -> noop
-          onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop
-          onPlaybackQualityChange={this.state.onPlaybackQualityChange}    // defaults -> noop
+          videoId={this.state.videoId}                  
+          id={this.state.id}                       
+          className={this.state.className}                
         />
        </div>
     );
