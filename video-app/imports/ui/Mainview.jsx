@@ -247,7 +247,7 @@ function DIF_drag(x,y) {
   }
 //   }
 //}
-//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Displayvideo from './Displayvideo.jsx';
 
@@ -286,8 +286,18 @@ export default class Mainview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'false',
-      pauses: '6000'      
+     videoId: 'string',                  // defaults -> null
+     id: 'player2',                       // defaults -> null
+     className: 'string',                // defaults -> null
+     opts: '{}',                        // defaults -> {}
+     onReady: 'func',                    // defaults -> noop
+     onPlay: 'func',                     // defaults -> noop
+     onPause: 'func',                    // defaults -> noop
+     onEnd: 'func',                      // defaults -> noop
+     onError: 'func',                    // defaults -> noop
+     onStateChange: 'func',              // defaults -> noop
+     onPlaybackRateChange: 'func',       // defaults -> noop
+     onPlaybackQualityChange: 'func',    // defaults -> noop      
     };
 
     this.handleEdits = this.handleEdits.bind(this);
@@ -388,7 +398,20 @@ export default class Mainview extends Component {
           
         </div>
         {this.renderVideos()}
-        
+        <YouTube
+          videoId={this.props.videoId}                  // defaults -> null
+          id={this.props.id}                       // defaults -> null
+          className={this.props.className}                // defaults -> null
+          opts={this.props.opts}                        // defaults -> {}
+          onReady={this.props.onReady}                    // defaults -> noop
+          onPlay={this.props.onPlay}                     // defaults -> noop
+          onPause={this.props.onPause}                    // defaults -> noop
+          onEnd={this.props.onEnd}                      // defaults -> noop
+          onError={this.props.onError}                    // defaults -> noop
+          onStateChange={this.props.onStateChange}              // defaults -> noop
+          onPlaybackRateChange={this.props.onPlaybackRateChange}       // defaults -> noop
+          onPlaybackQualityChange={this.props.onPlaybackQualityChange}    // defaults -> noop
+        />
        </div>
     );
   }
