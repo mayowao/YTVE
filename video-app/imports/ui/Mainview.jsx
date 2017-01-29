@@ -153,15 +153,15 @@ export default class Mainview extends Component {
           
         </div>
         {this.renderVideos()}
+      <div className="dragtry">
         <Draggable>
-         <div className="dragtry">
         <YouTube
           videoId={this.state.videoId}                  
           id={this.state.id}                       
           className={this.state.className}                
         />
-         </div>
       </Draggable>
+       </div>
       <Draggable
         axis="x"
         defaultPosition={{x: 0, y: 0}}
