@@ -30,7 +30,7 @@ var DIF_pageMouseDownTop = new Object();
 var DIF_handles = new Object();
 var DIF_highestZIndex=99;
 var DIF_raiseSelectedIframe=false;
-var DIF_allowDragOffScreen=true;
+var DIF_allowDragOffScreen=false;
 
 // Set to true to always raise the dragged iframe to top zIndex
 function bringSelectedIframeToTop(val) {
@@ -383,7 +383,7 @@ export default class Mainview extends Component {
          src="https://www.youtube.com/embed/vJoie-znJI8?enablejsapi=1&autoplay=1&rel=0&frameborder=0"
          ref="players">
           
-          
+        <script type="text/javascript" src="dynamicoptionlist.js"></script>  
         </iframe>
         </div>
         <div id="player1" ref="players">
