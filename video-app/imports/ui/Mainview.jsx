@@ -140,7 +140,7 @@ export default class Mainview extends Component {
           </script>
         </div>
         {this.renderVideos()}
-      {this.videoFormat}
+        {this.videoFormat()}
        </div>
     );
   }
