@@ -399,18 +399,18 @@ export default class Mainview extends Component {
         </div>
         {this.renderVideos()}
         <YouTube
-          videoId={this.props.videoId}                  // defaults -> null
-          id={this.props.id}                       // defaults -> null
-          className={this.props.className}                // defaults -> null
-          opts={this.props.opts}                        // defaults -> {}
-          onReady={this.props.onReady}                    // defaults -> noop
-          onPlay={this.props.onPlay}                     // defaults -> noop
-          onPause={this.props.onPause}                    // defaults -> noop
-          onEnd={this.props.onEnd}                      // defaults -> noop
-          onError={this.props.onError}                    // defaults -> noop
-          onStateChange={this.props.onStateChange}              // defaults -> noop
-          onPlaybackRateChange={this.props.onPlaybackRateChange}       // defaults -> noop
-          onPlaybackQualityChange={this.props.onPlaybackQualityChange}    // defaults -> noop
+          videoId={this.state.videoId}                  // defaults -> null
+          id={this.state.id}                       // defaults -> null
+          className={this.state.className}                // defaults -> null
+          opts={this.state.opts}                        // defaults -> {}
+          onReady={this.state.onReady}                    // defaults -> noop
+          onPlay={this.state.onPlay}                     // defaults -> noop
+          onPause={this.state.onPause}                    // defaults -> noop
+          onEnd={this.state.onEnd}                      // defaults -> noop
+          onError={this.state.onError}                    // defaults -> noop
+          onStateChange={this.state.onStateChange}              // defaults -> noop
+          onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop
+          onPlaybackQualityChange={this.state.onPlaybackQualityChange}    // defaults -> noop
         />
        </div>
     );
