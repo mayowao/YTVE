@@ -15,9 +15,6 @@ import { createContainer } from 'meteor/react-meteor-data';
  * 
  */
 
-//import React, { Component, PropTypes } from 'react';
-//export default class Dragiframe {
-  //render(){
 // Variables used for "Draggable IFrame" (DIF) functions
 var DIF_dragging=false;
 var DIF_iframeBeingDragged="";
@@ -259,7 +256,7 @@ firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);*/
 //var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
-export default class Mainview extends Component {
+export default class Editview extends Component {
  
  componentDidMount(){
    getDrag = function(){
