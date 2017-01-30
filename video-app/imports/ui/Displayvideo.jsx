@@ -5,6 +5,7 @@ import YouTube from 'react-youtube';
 import Draggable from 'react-draggable';
 import { Resizable, ResizableBox } from 'react-resizable';
 
+
 import { Headerbar } from './Headerbar.jsx'
  
 // Displayvideo component - represents the Viewing Area of the app
@@ -12,11 +13,11 @@ export default class Displayvideo extends Component {
  
   //Keyboard Shortcuts
   componentDidMount(){ 
-    Mousetrap.bind(['alt + f'], this.speedUp);
+    
   }
  
   componentWillUnmount(){ 
-    Mousetrap.unbind(['alt + f'], this.speedUp);
+   
   }
   
   //Displaying the Video Edits
@@ -51,11 +52,17 @@ export default class Displayvideo extends Component {
         showinfo: '',
         start: ''
       }},                        // defaults -> {}
+     
+      speed: '',
+      getSpeed: '',
+     
+     
      onReady: function(event){
        //event.target.playVideo();
        event.target.setPlaybackRate(0.5);
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
+       this.setState({speed: seeInitRate});
        //event.target.mute();
      },                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
@@ -66,6 +73,7 @@ export default class Displayvideo extends Component {
      onPlaybackRateChange: function(event){
        var seeRate = event.target.getPlaybackRate();
        console.log(seeRate);
+       this.setState({speed: seeRate});
      },       // defaults -> noop
      onPlaybackQualityChange: function(event){},    // defaults -> noop      
     };
@@ -73,11 +81,14 @@ export default class Displayvideo extends Component {
     this.handleEdits = this.handleEdits.bind(this);
     this.getEdits = this.getEdits.bind(this);
     this.renderVideos = this.renderVideos.bind(this);
+    this.handleSpeedClick = this.handleSpeedClick.bind(this);
+    this.handleSpeedChange = this.handleSpeedChange.bind(this);
+    this.handleSpeedSubmit = this.handleSpeedSubmit.bind(this);
   }
  
   handleEdits(){
     speedFunc = function(){
-      YouTube.PlayerState.setPlaybackRate(0.25);
+      YouTube.setPlaybackRate(0.25);
     };
    
    var doSpeed = speedFunc();
@@ -122,12 +133,30 @@ export default class Displayvideo extends Component {
   getVideos(){
     
   }
-    
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
     speedUp(event) {
     var newSpeed = this.seeRate + 0.5;
     YouTube.setPlaybackRate(newSpeed);
     //event.target.mute();
     }
+ 
+  handleSpeedClick(event) {
+    //this.setState({speed: event.target.value});
+  }
+ 
+  handleSpeedChange(event) {
+    this.setState({getSpeed: event.target.value});
+  }
+
+  handleSpeedSubmit(event) {
+    YouTube.setPlaybackRate(this.state.getSpeed);
+    alert('Speed was changed: ' + this.state.getSpeed);
+    event.preventDefault();
+    //this.setState({value: 'Search'});
+    console.log('Hello, youve submited');
+  }
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   renderVideos(){
   }
@@ -152,9 +181,26 @@ export default class Displayvideo extends Component {
              onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
              onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
            />
+           <table>
+             <th></th>
+             <tr>
+               <td>
+                 <form onSubmit={this.handleSpeedSubmit}>
+                   <label>
+
+                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
+
+                   </label>
+                   <input type="submit" value="Apply Video Speed" />
+                  </form>
+               </td>
+              <td>
            <strong>
              <div className="dragborder">Drag Here</div>
            </strong>
+               </td>
+            </tr>
+          </table>
          </div>
       </Draggable>
        </div>
