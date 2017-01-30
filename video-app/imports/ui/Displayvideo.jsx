@@ -97,7 +97,7 @@ export default class Displayvideo extends Component {
   }
     
     onPlayerReady(event) {
-    //console.log(this.state.value);
+    console.log(this.state.opts.width);
     event.target.playVideo();
     event.target.mute();
     }
