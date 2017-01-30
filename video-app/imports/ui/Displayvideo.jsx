@@ -57,7 +57,7 @@ export default class Displayvideo extends Component {
  
   handleEdits(){
     speedFunc = function(){
-      YouTube.PlayerState.setPlaybackRate(suggestedRate:0.25);
+      YouTube.PlayerState.setPlaybackRate(0.25);
     };
    
    var doSpeed = speedFunc();
