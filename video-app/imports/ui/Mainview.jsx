@@ -6,6 +6,12 @@ import Draggable from 'react-draggable';
 
 import Displayvideo from './Displayvideo.jsx';
 
+onPlayerReady = function(event) {
+    //console.log(this.state.value);
+    event.target.playVideo();
+    event.target.mute();
+  }
+
 /*var ytiframe = document.createElement('script');
 ytiframe.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
