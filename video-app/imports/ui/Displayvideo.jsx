@@ -42,7 +42,7 @@ export default class Displayvideo extends Component {
         start: ''
       }},                        // defaults -> {}
      onReady: function(event){
-       event.target.playVideo();
+       //event.target.playVideo();
        event.target.setPlaybackRate(0.5);
        var seeRate = event.target.getPlaybackRate();
        console.log(seeRate);
