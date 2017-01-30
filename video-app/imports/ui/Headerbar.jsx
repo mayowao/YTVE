@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+import { createContainer } from 'meteor/react-meteor-data';
  
 import Profile from './Profile.jsx'
-/*import Search from './Search.jsx';
-import Settings from './Settings.jsx';
+import Search from './Search.jsx';
+/*import Settings from './Settings.jsx';
 import QuickFind from './QuickFind.jsx';*/
  
 // Header component - represents the header functions
@@ -30,6 +31,15 @@ export default class Headerbar extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+ 
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ //Getting Search Info
+ componentDidMount(){
+   ReactDOM.render(
+    <Search />,
+     document.getElementById('searchbar')
+   );
+ }
 
   handleSearchClick(event) {
     this.setState({value: ''});
@@ -49,7 +59,7 @@ export default class Headerbar extends Component {
   render() {
     return (
      <header>
-      <div className="searchbar">
+      <div className="searchbar" id="searchbar">
        <form onSubmit={this.handleSubmit}>
         <label>
          
