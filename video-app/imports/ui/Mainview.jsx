@@ -5,19 +5,6 @@ import YouTube from 'react-youtube';
 import Draggable from 'react-draggable';
 
 import Displayvideo from './Displayvideo.jsx';
-
-onPlayerReady = function(event) {
-    //console.log(this.state.value);
-    event.target.playVideo();
-    event.target.mute();
-  }
-
-/*var ytiframe = document.createElement('script');
-ytiframe.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(ytiframe, firstScriptTag);*/
-
-//var renderVideos = require('youtube-iframe');
  
 // MainView component - represents the Viewing/Editing Secion of our app
 export default class Mainview extends Component {
@@ -89,6 +76,12 @@ export default class Mainview extends Component {
   getVideos(){
     
   }
+    
+    onPlayerReady(event) {
+    //console.log(this.state.value);
+    event.target.playVideo();
+    event.target.mute();
+    }
 
  renderVideos(){
   // 4. The API will call this function when the video player is ready.
