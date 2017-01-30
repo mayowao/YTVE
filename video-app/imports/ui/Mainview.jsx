@@ -31,7 +31,7 @@ export default class Mainview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     videoId: 'SXiSVQZLje8',                  // defaults -> null
+     videoId: 'SXiSVQZLje8'                  // defaults -> null
     };
   }
 
