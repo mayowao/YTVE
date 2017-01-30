@@ -46,7 +46,8 @@ export default class Displayvideo extends Component {
        event.target.setPlaybackRate(0.5);
        var seeRate = event.target.getPlaybackRate();
        console.log(seeRate);
-       event.target.mute();},                    // defaults -> noop
+       //event.target.mute();
+     },                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
      onEnd: function(event){},                      // defaults -> noop
@@ -54,7 +55,8 @@ export default class Displayvideo extends Component {
      onStateChange: function(event){},              // defaults -> noop
      onPlaybackRateChange: function(event){
        var seeTime = event.target.getPlaybackRate();
-       console.log(seeTime);},       // defaults -> noop
+       console.log(seeTime);
+     },       // defaults -> noop
      onPlaybackQualityChange: function(event){},    // defaults -> noop      
     };
 
