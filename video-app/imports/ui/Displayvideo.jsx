@@ -44,6 +44,8 @@ export default class Displayvideo extends Component {
      onReady: function(event){
        event.target.playVideo();
        event.target.setPlaybackRate(0.5);
+       var seeRate = event.target.getPlaybackRate();
+       console.log(seeRate);
        event.target.mute();},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
