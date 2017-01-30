@@ -54,8 +54,8 @@ export default class Displayvideo extends Component {
      onReady: function(event){
        //event.target.playVideo();
        event.target.setPlaybackRate(0.5);
-       var seeRate = event.target.getPlaybackRate();
-       console.log(seeRate);
+       var seeInitRate = event.target.getPlaybackRate();
+       console.log(seeInitRate);
        //event.target.mute();
      },                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
@@ -64,8 +64,8 @@ export default class Displayvideo extends Component {
      onError: function(event){},                    // defaults -> noop
      onStateChange: function(event){},              // defaults -> noop
      onPlaybackRateChange: function(event){
-       var seeTime = event.target.getPlaybackRate();
-       console.log(seeTime);
+       var seeRate = event.target.getPlaybackRate();
+       console.log(seeRate);
      },       // defaults -> noop
      onPlaybackQualityChange: function(event){},    // defaults -> noop      
     };
@@ -124,7 +124,7 @@ export default class Displayvideo extends Component {
   }
     
     speedUp(event) {
-    var newSpeed = {this.seeTime}+0.5;
+    var newSpeed = this.seeRate + 0.5;
     YouTube.setPlaybackRate(newSpeed);
     //event.target.mute();
     }
