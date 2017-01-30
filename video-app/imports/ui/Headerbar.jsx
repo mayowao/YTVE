@@ -34,15 +34,7 @@ export default class Headerbar extends Component {
  
  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  //Getting Search Info
- componentDidMount(){
-   // render the dynamic code of the page to a string.
-   var appHtml = ReactDOM.renderToString(<Search />);
-
-   // now use React as a static templating language to create the <html>, 
-   // <head>, and <body> tags
-   var fullPageHtml = ReactDOM.renderToStaticMarkup(<HtmlPage content={appHtml}/>);
-
-   res.write(fullPageHtml); 
+ componentDidMount(){ 
    
  }
 
