@@ -190,9 +190,7 @@ export default class Displayvideo extends Component {
              onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
            />
            <table>
-             <tr>
-              <th></th>
-             </tr>
+            <tbody>
              <tr>
                <td>
                  <form onSubmit={this.handleSpeedSubmit}>
@@ -205,11 +203,12 @@ export default class Displayvideo extends Component {
                   </form>
                </td>
               <td>
-           <strong>
-             <div className="dragborder">Drag Here</div>
-           </strong>
-               </td>
+                <strong>
+                  <div className="dragborder">Drag Here</div>
+                </strong>
+              </td>
             </tr>
+           </tbody>
           </table>
          </div>
       </Draggable>
