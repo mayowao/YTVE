@@ -85,7 +85,7 @@ export default class Displayvideo extends Component {
   }
  
   getEdits(){
-    this.state.videoId = '';
+    this.state.videoId  '';
     this.state.id = '';
     this.state.className = '';
     this.state.opts.height = '';
@@ -134,7 +134,7 @@ export default class Displayvideo extends Component {
   }
  
   handleSpeedChange(event) {
-    this.state.getSpeed = event.target.value;
+    this.setState({getSpeed: event.target.value});
   }
 
   handleSpeedSubmit(event) {
@@ -155,14 +155,14 @@ export default class Displayvideo extends Component {
        event.target.setPlaybackRate(0.5);
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
-       this.state.speed = seeInitRate;
+       this.setState({speed: seeInitRate});
        //event.target.mute();
      }
  
   onPlaybackRateChange(event){
        var seeRate = event.target.getPlaybackRate();
        console.log(seeRate);
-       this.state.speed = seeRate;
+       this.setState({speed: seeRate});
      }
  
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
