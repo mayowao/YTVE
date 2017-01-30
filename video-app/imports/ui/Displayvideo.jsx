@@ -190,7 +190,6 @@ export default class Displayvideo extends Component {
              onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
            />
            <table>
-             <th></th>
              <tr>
                <td>
                  <form onSubmit={this.handleSpeedSubmit}>
