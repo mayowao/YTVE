@@ -39,6 +39,7 @@ export default class Displayvideo extends Component {
         start: ''
       }},                        // defaults -> {}
      onReady: function(event){
+       event.taret.setPlaybackRate(suggestedRate:0.25);
        event.target.playVideo();
        event.target.mute();},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
