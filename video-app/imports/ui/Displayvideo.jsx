@@ -9,12 +9,18 @@ import { Headerbar } from './Headerbar.jsx'
  
 // Displayvideo component - represents the Viewing Area of the app
 export default class Displayvideo extends Component {
+ 
+  //Keyboard Shortcuts
+  componentDidMount(){ 
+    Mousetrap.bind(['* ='], this.speedUp);
+  }
+  
   //Displaying the Video Edits
   constructor(props) {
     super(props);
     this.state = {
      videoId: 'SXiSVQZLje8',                  // defaults -> null
-     id: '',                       // defaults -> null
+     id: 'player',                       // defaults -> null
      className: 'player2',                // defaults -> null
      opts: {
       height: '390',
@@ -113,10 +119,10 @@ export default class Displayvideo extends Component {
     
   }
     
-    onPlayerReady(event) {
-    console.log(this.state.opts.width);
-    event.target.playVideo();
-    event.target.mute();
+    speedUp(event) {
+    
+    YouTube.setPlaybackRate({this.seeTime}+0.5);
+    //event.target.mute();
     }
 
   renderVideos(){
