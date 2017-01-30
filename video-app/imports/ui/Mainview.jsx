@@ -10,6 +10,7 @@ import Displayvideo from './Displayvideo.jsx';
 export default class Mainview extends Component {
  
  componentDidMount(){
+   render(<Displayvideo />, document.getElementById('mainscreen'));
  }
 
   getRelVideos() {
