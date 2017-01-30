@@ -141,7 +141,7 @@ export default class Displayvideo extends Component {
 
   handleSpeedSubmit(event) {
     YouTube.setPlaybackRate(this.state.getSpeed);
-    alert('Speed was changed: ' + this.state.getSpeed);
+    //alert('Speed was changed: ' + this.state.getSpeed);
     event.preventDefault();
     //this.setState({value: 'Search'});
     console.log('Hello, youve submited');
