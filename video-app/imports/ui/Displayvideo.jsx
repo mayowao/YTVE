@@ -17,7 +17,26 @@ export default class Displayvideo extends Component {
       height: '390',
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters 
-        autoplay: 1
+        autoplay: 1,
+        cc_load_policy: '',
+        color: '',
+        controls: '',
+        disablekb: '',
+        enablejsapi: '',
+        end: '',
+        fs: '',
+        hl: '',
+        iv_load_policy: '',
+        list: '',
+        listType: '',
+        loop: '',
+        modestbranding: '',
+        origin: '',
+        playlist: '',
+        playsinline: '',
+        rel: '',
+        showinfo: '',
+        start: ''
       }},                        // defaults -> {}
      onReady: 'func',                    // defaults -> noop
      onPlay: 'func',                     // defaults -> noop
@@ -45,18 +64,18 @@ export default class Displayvideo extends Component {
     this.state.height = '';
     this.state.width = '';
    
-    this.state.autoplay = '';
-    this.state.cc_load_policy = '';
-    this.state.color = '';
-    this.state.controls = '';
-    this.state.disablekb = '';
-    this.state.enablejsapi = '';
-    this.state.end = '';
-    this.state.fs = '';
-    this.state.hl = '';
-    this.state.iv_load_policy = '';
-    this.state.list = '';
-    this.state.listType = '';
+    this.state.playerVars.autoplay = '';
+    this.state.playerVars.cc_load_policy = '';
+    this.state.playerVars.color = '';
+    this.state.playerVars.controls = '';
+    this.state.playerVars.disablekb = '';
+    this.state.playerVars.enablejsapi = '';
+    this.state.playerVars.end = '';
+    this.state.playerVars.fs = '';
+    this.state.playerVars.hl = '';
+    this.state.playerVars.iv_load_policy = '';
+    this.state.playerVars.list = '';
+    this.state.playerVars.listType = '';
     this.state.loop = '';
     this.state.modestbranding = '';
     this.state.origin = '';
