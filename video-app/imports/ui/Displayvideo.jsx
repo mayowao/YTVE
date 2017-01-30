@@ -20,7 +20,7 @@ export default class Displayvideo extends Component {
       height: '390',
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters 
-        autoplay: 1,
+        autoplay: '1',
         cc_load_policy: '',
         color: '',
         controls: '',
