@@ -57,24 +57,13 @@ export default class Displayvideo extends Component {
       getSpeed: '',
      
      
-     onReady: function(event){
-       //event.target.playVideo();
-       event.target.setPlaybackRate(0.5);
-       var seeInitRate = event.target.getPlaybackRate();
-       console.log(seeInitRate);
-       this.setState({speed: seeInitRate});
-       //event.target.mute();
-     },                    // defaults -> noop
+     onReady: '',                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
      onEnd: function(event){},                      // defaults -> noop
      onError: function(event){},                    // defaults -> noop
      onStateChange: function(event){},              // defaults -> noop
-     onPlaybackRateChange: function(event){
-       var seeRate = event.target.getPlaybackRate();
-       console.log(seeRate);
-       this.setState({speed: seeRate});
-     },       // defaults -> noop
+     onPlaybackRateChange: function(event){},       // defaults -> noop
      onPlaybackQualityChange: function(event){},    // defaults -> noop      
     };
 
@@ -160,6 +149,23 @@ export default class Displayvideo extends Component {
 
   renderVideos(){
   }
+
+  onReady(event){
+       //event.target.playVideo();
+       event.target.setPlaybackRate(0.5);
+       var seeInitRate = event.target.getPlaybackRate();
+       console.log(seeInitRate);
+       this.setState({speed: seeInitRate});
+       //event.target.mute();
+     }
+ 
+  onPlaybackRateChange(event){
+       var seeRate = event.target.getPlaybackRate();
+       console.log(seeRate);
+       this.setState({speed: seeRate});
+     }
+ 
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  
   //Create the Video Screens via HTML
   render() {
@@ -172,13 +178,13 @@ export default class Displayvideo extends Component {
              id={this.state.id}                       
              className={this.state.className}
              opts={this.state.opts}
-             onReady={this.state.onReady}
+             onReady={this.onReady}
              onPlay={this.state.onPlay}                     // defaults -> noop
              onPause={this.state.onPause}                    // defaults -> noop 
              onEnd={this.state.onEnd}                      // defaults -> noop 
              onError={this.state.onError}                    // defaults -> noop 
              onStateChange={this.state.onStateChange}              // defaults -> noop 
-             onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
+             onPlaybackRateChange={this.onPlaybackRateChange}       // defaults -> noop 
              onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
            />
            <table>
