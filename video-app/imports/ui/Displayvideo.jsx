@@ -39,6 +39,33 @@ export default class Displayvideo extends Component {
   }
  
   getEdits(){
+    this.state.videoId = '';
+    this.state.id = '';
+    this.state.className = '';
+    this.state.height = '';
+    this.state.width = '';
+   
+    this.state.autoplay = '';
+    this.state.cc_load_policy = '';
+    this.state.color = '';
+    this.state.controls = '';
+    this.state.disablekb = '';
+    this.state.enablejsapi = '';
+    this.state.end = '';
+    this.state.fs = '';
+    this.state.hl = '';
+    this.state.iv_load_policy = '';
+    this.state.list = '';
+    this.state.listType = '';
+    this.state.loop = '';
+    this.state.modestbranding = '';
+    this.state.origin = '';
+    this.state.playlist = '';
+    this.state.playsinline = '';
+    this.state.rel = '';
+    this.state.showinfo = '';
+    this.state.start = '';
+    
   }
  
   renderEdits(){
@@ -70,7 +97,7 @@ export default class Displayvideo extends Component {
           id={this.state.id}                       
           className={this.state.className}
           opts={this.state.opts}
-          onReady={this.onPlayerReady}
+          onReady={this.state}
         />
          </div>
       </Draggable>
