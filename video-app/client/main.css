@@ -60,15 +60,15 @@
 /*-------------------------------------------------------*/
 
 .dragtry {
-    width: 300px;
-    height: 100px;
+    /*width: 300px;
+    height: 100px;*/
     background: #A1DB6A;
     position: relative;/*parent must have positioning*/
 }
 .player2 {
     border: 0;
-    height: 80px;
-    width: 100%;
+    /*height: 80px;
+    width: 100%;*/
     background: #ddd;
 }
 /*Cover up the entire element (could be limited to just covering the iframe element)*/
