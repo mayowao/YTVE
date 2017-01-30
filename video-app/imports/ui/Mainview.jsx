@@ -13,7 +13,7 @@ export default class Mainview extends Component {
     showVideos = function(){
      var addVideo = document.getElementById("mainscreen");
      //addVideo.appendChild(<Displayvideo />);
-     console.log(<Displayvideo />);
+     console.log(Displayvideo.render());
     }
     
     var doShow = showVideos();
