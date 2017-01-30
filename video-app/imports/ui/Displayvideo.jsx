@@ -15,7 +15,9 @@ export default class Displayvideo extends Component {
   componentDidMount(){ 
    var addEditOpts = document.getElementsByClassName('editopts');
    var addEditBar = addEditOpts.appendChild(
-    <tr>
+     <table>
+            <tbody>
+              <tr>
                <td>
                  <form onSubmit={this.handleSpeedSubmit}>
                    <label>
@@ -31,7 +33,10 @@ export default class Displayvideo extends Component {
                   <div className="dragborder">Drag Here</div>
                 </strong>
               </td>
-            </tr>
+            </tr> 
+           </tbody>
+          </table>
+    
     );
    
     
@@ -210,13 +215,9 @@ export default class Displayvideo extends Component {
              onPlaybackRateChange={this.onPlaybackRateChange}       // defaults -> noop 
              onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
            />
-           <table>
-            <tbody>
-             <div className="editopts">
-             
-             </div>
-           </tbody>
-          </table>
+          <div className="editopts">
+           
+           </div>
          </div>
       </Draggable>
        </div>
