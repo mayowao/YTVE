@@ -65,7 +65,7 @@
     background: #A1DB6A;
     position: relative;/*parent must have positioning*/
 }
-iframe {
+.player2 {
     border: 0;
     height: 80px;
     width: 100%;
