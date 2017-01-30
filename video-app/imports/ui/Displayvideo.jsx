@@ -63,29 +63,29 @@ export default class Displayvideo extends Component {
     this.state.videoId = '';
     this.state.id = '';
     this.state.className = '';
-    this.state.height = '';
-    this.state.width = '';
+    this.state.opts.height = '';
+    this.state.opts.width = '';
    
-    this.state.playerVars.autoplay = '';
-    this.state.playerVars.cc_load_policy = '';
-    this.state.playerVars.color = '';
-    this.state.playerVars.controls = '';
-    this.state.playerVars.disablekb = '';
-    this.state.playerVars.enablejsapi = '';
-    this.state.playerVars.end = '';
-    this.state.playerVars.fs = '';
-    this.state.playerVars.hl = '';
-    this.state.playerVars.iv_load_policy = '';
-    this.state.playerVars.list = '';
-    this.state.playerVars.listType = '';
-    this.state.loop = '';
-    this.state.modestbranding = '';
-    this.state.origin = '';
-    this.state.playlist = '';
-    this.state.playsinline = '';
-    this.state.rel = '';
-    this.state.showinfo = '';
-    this.state.start = '';
+    this.state.opts.playerVars.autoplay = '';
+    this.state.opts.playerVars.cc_load_policy = '';
+    this.state.opts.playerVars.color = '';
+    this.state.opts.playerVars.controls = '';
+    this.state.opts.playerVars.disablekb = '';
+    this.state.opts.playerVars.enablejsapi = '';
+    this.state.opts.playerVars.end = '';
+    this.state.opts.playerVars.fs = '';
+    this.state.opts.playerVars.hl = '';
+    this.state.opts.playerVars.iv_load_policy = '';
+    this.state.opts.playerVars.list = '';
+    this.state.opts.playerVars.listType = '';
+    this.state.opts.playerVars.loop = '';
+    this.state.opts.playerVars.modestbranding = '';
+    this.state.opts.playerVars.origin = '';
+    this.state.opts.playerVars.playlist = '';
+    this.state.opts.playerVars.playsinline = '';
+    this.state.opts.playerVars.rel = '';
+    this.state.opts.playerVars.showinfo = '';
+    this.state.opts.playerVars.start = '';
     
   }
  
