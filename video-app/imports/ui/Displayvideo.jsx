@@ -13,6 +13,27 @@ export default class Displayvideo extends Component {
  
   //Keyboard Shortcuts
   componentDidMount(){ 
+   var addEditOpts = document.getElementsByClassName('editopts');
+   var addEditBar = addEditOpts.appendChild(
+    <tr>
+               <td>
+                 <form onSubmit={this.handleSpeedSubmit}>
+                   <label>
+
+                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
+
+                   </label>
+                   <input type="submit" value="Apply Video Speed" />
+                  </form>
+               </td>
+              <td>
+                <strong>
+                  <div className="dragborder">Drag Here</div>
+                </strong>
+              </td>
+            </tr>
+    );
+   
     
   }
  
@@ -191,23 +212,9 @@ export default class Displayvideo extends Component {
            />
            <table>
             <tbody>
-             <tr>
-               <td>
-                 <form onSubmit={this.handleSpeedSubmit}>
-                   <label>
-
-                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
-
-                   </label>
-                   <input type="submit" value="Apply Video Speed" />
-                  </form>
-               </td>
-              <td>
-                <strong>
-                  <div className="dragborder">Drag Here</div>
-                </strong>
-              </td>
-            </tr>
+             <div className="editopts">
+             
+             </div>
            </tbody>
           </table>
          </div>
