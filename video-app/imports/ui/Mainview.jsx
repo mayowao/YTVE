@@ -13,6 +13,7 @@ export default class Mainview extends Component {
     showVideos = function(){
      var addVideo = document.getElementById("mainscreen");
      addVideo.appendChild(<Displayvideo />);
+     console.log(<Displayvideo />);
     }
     
     var doShow = showVideos();
@@ -38,12 +39,6 @@ export default class Mainview extends Component {
   getVideos(){
     
   }
-    
-    onPlayerReady(event) {
-    //console.log(this.state.value);
-    event.target.playVideo();
-    event.target.mute();
-    }
 
   //Displaying the comments
   getComments(){
@@ -58,7 +53,6 @@ export default class Mainview extends Component {
       <div className="vidviewer">        
         <h1>Viewing Videos</h1>
         <div id="mainscreen" className="mainscreen">
-         
         </div>
        </div>
     );
