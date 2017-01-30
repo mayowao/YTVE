@@ -10,10 +10,9 @@ import Displayvideo from './Displayvideo.jsx';
 export default class Mainview extends Component {
  
  componentDidMount(){
-    showVideos = function(){
-     var addVideo = document.getElementById("mainscreen");
-     //addVideo.appendChild(<Displayvideo />);
-     console.log(<Displayvideo />);
+   <Displayvideo />,
+     document.getElementById("mainscreen")
+     
     }
     
     var doShow = showVideos();
