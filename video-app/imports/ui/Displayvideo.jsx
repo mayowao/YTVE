@@ -38,14 +38,17 @@ export default class Displayvideo extends Component {
         showinfo: '',
         start: ''
       }},                        // defaults -> {}
-     onReady: 'func',                    // defaults -> noop
-     onPlay: 'func',                     // defaults -> noop
-     onPause: 'func',                    // defaults -> noop
-     onEnd: 'func',                      // defaults -> noop
-     onError: 'func',                    // defaults -> noop
-     onStateChange: 'func',              // defaults -> noop
-     onPlaybackRateChange: 'func',       // defaults -> noop
-     onPlaybackQualityChange: 'func',    // defaults -> noop      
+     onReady: function(event){
+      console.log(this.state.opts.width);
+    event.target.playVideo();
+    event.target.mute();},                    // defaults -> noop
+     onPlay: function(event){},                     // defaults -> noop
+     onPause: function(event){},                    // defaults -> noop
+     onEnd: function(event){},                      // defaults -> noop
+     onError: function(event){},                    // defaults -> noop
+     onStateChange: function(event){},              // defaults -> noop
+     onPlaybackRateChange: function(event){},       // defaults -> noop
+     onPlaybackQualityChange: function(event){},    // defaults -> noop      
     };
 
     this.handleEdits = this.handleEdits.bind(this);
@@ -116,7 +119,14 @@ export default class Displayvideo extends Component {
           id={this.state.id}                       
           className={this.state.className}
           opts={this.state.opts}
-          onReady={this.state.onPlayerReady}
+          onReady={this.state.onReady}
+          onPlay={this.state.onPlay}                     // defaults -> noop
+          onPause={this.state.onPause}                    // defaults -> noop 
+          onEnd={this.state.onEnd}                      // defaults -> noop 
+          onError={this.state.onError}                    // defaults -> noop 
+          onStateChange={this.state.onStateChange}              // defaults -> noop 
+          onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
+          onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
         />
          </div>
       </Draggable>
