@@ -116,7 +116,7 @@ export default class Displayvideo extends Component {
           id={this.state.id}                       
           className={this.state.className}
           opts={this.state.opts}
-          onReady={this.state}
+          onReady={this.state.onPlayerReady}
         />
          </div>
       </Draggable>
