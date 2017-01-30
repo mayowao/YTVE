@@ -6,11 +6,6 @@ import Draggable from 'react-draggable';
  
 // Displayvideo component - represents the Viewing Area of the app
 export default class Displayvideo extends Component {
- 
- componentDidMount(){
- }
-
-  
   //Displaying the Video Edits
   constructor(props) {
     super(props);
