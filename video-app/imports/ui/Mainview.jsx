@@ -57,7 +57,7 @@ export default class Mainview extends Component {
     return (
       <div className="vidviewer">        
         <h1>Viewing Videos</h1>
-        <div className="mainscreen">
+        <div id="mainscreen" className="mainscreen">
          
         </div>
        </div>
