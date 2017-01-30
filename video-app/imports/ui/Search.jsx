@@ -26,6 +26,7 @@ export default class Search extends Component {
   _onSearchResultsFound(results) {
     // Results is an array of retreived search results
     // I use flux, so I dispatch results to an action
-    flux.actions.showSearchResults(results);
+    //flux.actions.showSearchResults(results);
+    console.log(results);
   }
 }
