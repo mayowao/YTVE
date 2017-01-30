@@ -57,7 +57,7 @@ export default class Displayvideo extends Component {
       getSpeed: '',
      
      
-     onReady: '',                    // defaults -> noop
+     onReady: function(event){},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
      onEnd: function(event){},                      // defaults -> noop
@@ -134,7 +134,7 @@ export default class Displayvideo extends Component {
   }
  
   handleSpeedChange(event) {
-    this.setState({getSpeed: event.target.value});
+    this.state.getSpeed = event.target.value;
   }
 
   handleSpeedSubmit(event) {
@@ -155,14 +155,14 @@ export default class Displayvideo extends Component {
        event.target.setPlaybackRate(0.5);
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
-       this.setState({speed: seeInitRate});
+       this.state.speed = seeInitRate;
        //event.target.mute();
      }
  
   onPlaybackRateChange(event){
        var seeRate = event.target.getPlaybackRate();
        console.log(seeRate);
-       this.setState({speed: seeRate});
+       this.state.speed = seeRate;
      }
  
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
