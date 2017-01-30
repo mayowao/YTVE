@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
-import YoutubeAutocomplete from 'react-youtube-autocomplete';
+import { YoutubeAutocomplete } from 'react-youtube-autocomplete';
 
 export default class Search extends Component {
   //Getting the search results
