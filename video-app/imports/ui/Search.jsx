@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { createContainer } from 'meteor/react-meteor-data';
 import YoutubeAutocomplete from 'react-youtube-autocomplete';
 
-export default class Displayvideo extends Component {
-  //Displaying the Video Edits
+export default class Search extends Component {
+  //Getting the search results
   constructor(props) {
     super(props);
     this.state = {
