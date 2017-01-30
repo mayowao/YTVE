@@ -85,7 +85,7 @@ export default class Displayvideo extends Component {
   }
  
   getEdits(){
-    this.state.videoId  '';
+    this.state.videoId=  '';
     this.state.id = '';
     this.state.className = '';
     this.state.opts.height = '';
