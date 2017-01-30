@@ -40,7 +40,7 @@ export default class Displayvideo extends Component {
       }},                        // defaults -> {}
      onReady: function(event){
        var seeTime = event.target.getDuration();
-       console.log('seeTime');
+       console.log(seeTime);
        event.target.playVideo();
        event.target.mute();},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
