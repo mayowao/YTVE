@@ -132,6 +132,7 @@ export default class Displayvideo extends Component {
           onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
           onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
         />
+          {this.handleEdits()}
          </div>
       </Draggable>
        </div>
