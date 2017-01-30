@@ -42,10 +42,10 @@ export default class Displayvideo extends Component {
         start: ''
       }},                        // defaults -> {}
      onReady: function(event){
+       event.target.playVideo();
+       event.target.setPlaybackRate(0.5);
        var seeTime = event.target.getPlaybackRate();
        console.log(seeTime);
-       event.target.playVideo();
-       event.target.setPlaybackRate(0.25);
        event.target.mute();},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
