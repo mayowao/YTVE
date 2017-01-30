@@ -18,7 +18,7 @@ export default class Search extends Component {
       <YouTubeAutocomplete
         apiKey={this.state.youtubeDataApiKey}
         placeHolder="Search Youtube"
-        callback= this._onSearchResultsFound
+        callback= {this._onSearchResultsFound}
       />
     );
   }
