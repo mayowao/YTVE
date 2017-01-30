@@ -191,6 +191,9 @@ export default class Displayvideo extends Component {
            />
            <table>
              <tr>
+              <th></th>
+             </tr>
+             <tr>
                <td>
                  <form onSubmit={this.handleSpeedSubmit}>
                    <label>
