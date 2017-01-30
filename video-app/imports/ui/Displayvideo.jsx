@@ -124,23 +124,25 @@ export default class Displayvideo extends Component {
   render() {
     return (
       <div className="vidscreen">
-        <Draggable>
+        <Draggable handle="strong">
          <div className="dragtry">
-        <YouTube
-          videoId={this.state.videoId}                  
-          id={this.state.id}                       
-          className={this.state.className}
-          opts={this.state.opts}
-          onReady={this.state.onReady}
-          onPlay={this.state.onPlay}                     // defaults -> noop
-          onPause={this.state.onPause}                    // defaults -> noop 
-          onEnd={this.state.onEnd}                      // defaults -> noop 
-          onError={this.state.onError}                    // defaults -> noop 
-          onStateChange={this.state.onStateChange}              // defaults -> noop 
-          onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
-          onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
-        />
-          
+           <YouTube
+             videoId={this.state.videoId}                  
+             id={this.state.id}                       
+             className={this.state.className}
+             opts={this.state.opts}
+             onReady={this.state.onReady}
+             onPlay={this.state.onPlay}                     // defaults -> noop
+             onPause={this.state.onPause}                    // defaults -> noop 
+             onEnd={this.state.onEnd}                      // defaults -> noop 
+             onError={this.state.onError}                    // defaults -> noop 
+             onStateChange={this.state.onStateChange}              // defaults -> noop 
+             onPlaybackRateChange={this.state.onPlaybackRateChange}       // defaults -> noop 
+             onPlaybackQualityChange={this.state.onPlaybackQualityChange} 
+           />
+           <strong>
+             <div className="dragborder">Drag Here</div>
+           </strong>
          </div>
       </Draggable>
        </div>
