@@ -14,6 +14,10 @@ export default class Displayvideo extends Component {
   componentDidMount(){ 
     Mousetrap.bind(['* ='], this.speedUp);
   }
+ 
+  componentWillUnmount(){ 
+    Mousetrap.unbind(['* ='], this.speedUp);
+  }
   
   //Displaying the Video Edits
   constructor(props) {
@@ -120,8 +124,8 @@ export default class Displayvideo extends Component {
   }
     
     speedUp(event) {
-    
-    YouTube.setPlaybackRate({this.seeTime}+0.5);
+    var newSpeed = {this.seeTime}+0.5;
+    YouTube.setPlaybackRate(newSpeed);
     //event.target.mute();
     }
 
