@@ -12,11 +12,11 @@ export default class Displayvideo extends Component {
  
   //Keyboard Shortcuts
   componentDidMount(){ 
-    Mousetrap.bind(['alt + ='], this.speedUp);
+    Mousetrap.bind(['alt + f'], this.speedUp);
   }
  
   componentWillUnmount(){ 
-    Mousetrap.unbind(['alt + ='], this.speedUp);
+    Mousetrap.unbind(['alt + f'], this.speedUp);
   }
   
   //Displaying the Video Edits
