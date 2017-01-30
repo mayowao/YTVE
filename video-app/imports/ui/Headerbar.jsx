@@ -65,6 +65,7 @@ export default class Headerbar extends Component {
         </label>
         <input type="submit" value="Insertsearchpic" />
        </form>
+       <Search />
       </div>
        <ul>
           {this.renderProfileInfo()}
