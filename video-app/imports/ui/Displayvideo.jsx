@@ -39,9 +39,8 @@ export default class Displayvideo extends Component {
         start: ''
       }},                        // defaults -> {}
      onReady: function(event){
-      console.log(this.state.opts.width);
-    event.target.playVideo();
-    event.target.mute();},                    // defaults -> noop
+       event.target.playVideo();
+       event.target.mute();},                    // defaults -> noop
      onPlay: function(event){},                     // defaults -> noop
      onPause: function(event){},                    // defaults -> noop
      onEnd: function(event){},                      // defaults -> noop
