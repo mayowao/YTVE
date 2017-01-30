@@ -10,7 +10,12 @@ import Displayvideo from './Displayvideo.jsx';
 export default class Mainview extends Component {
  
  componentDidMount(){
-   render(<Displayvideo />, document.getElementById('mainscreen'));
+    showVideos = function(){
+     var addVideo = document.getElementById('mainscreen');
+     addVideo.insertBefore(<Displayvideo />);
+    }
+    
+    var doShow = showVideos();
  }
 
   getRelVideos() {
@@ -40,9 +45,6 @@ export default class Mainview extends Component {
     event.target.mute();
     }
 
- showVideos(){
- }
- 
   //Displaying the comments
   getComments(){
   }
