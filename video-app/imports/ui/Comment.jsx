@@ -1,11 +1,13 @@
 import React, { Component, PropTypes } from 'react';
+import { Savededits } from './Savededits.jsx';
  
 // Comment component - represents a single video screen edit
 export default class Comment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     addVideo: 'SXiSVQZLje8',                  // defaults -> null
+     words: '',
+     mainVideo: 'SXiSVQZLje8',
      id: '',                       // defaults -> null
      className: 'player2',                // defaults -> null
      opts: {
@@ -21,13 +23,20 @@ export default class Comment extends Component {
      onError: 'func',                    // defaults -> noop
      onStateChange: 'func',              // defaults -> noop
      onPlaybackRateChange: 'func',       // defaults -> noop
-     onPlaybackQualityChange: 'func',    // defaults -> noop      
+     onPlaybackQualityChange: 'func',    // defaults -> noop 
+     
     };
 
   render() {
     return (
       <div className="comment">
-      <li>{this.props.task.text}</li>
+      <li>
+        <td className="profilepic">
+          <div className="commenttext">
+            {this.state.words}
+         </div>
+        </td>
+      </li>
       </div>
     );
   }
