@@ -73,6 +73,8 @@ export default class Displayvideo extends Component {
     this.handleSpeedClick = this.handleSpeedClick.bind(this);
     this.handleSpeedChange = this.handleSpeedChange.bind(this);
     this.handleSpeedSubmit = this.handleSpeedSubmit.bind(this);
+    this.onReady = this.onReady.bind(this);
+    this.onPlaybackRateChange = this.onPlaybackRateChange.bind(this);
   }
  
   handleEdits(){
