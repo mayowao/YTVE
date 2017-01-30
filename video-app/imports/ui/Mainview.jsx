@@ -89,6 +89,7 @@ export default class Mainview extends Component {
   onPlayerReady = function(event) {
     //console.log(this.state.value);
     event.target.playVideo();
+    event.target.mute();
   }
 
   // 5. The API calls this function when the player's state changes.
@@ -166,6 +167,7 @@ export default class Mainview extends Component {
           id={this.state.id}                       
           className={this.state.className}
           opts={this.state.opts}
+          onReady={this.onPlayerReady}
         />
          </div>
       </Draggable>
