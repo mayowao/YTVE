@@ -11,7 +11,7 @@ export default class Mainview extends Component {
  
  componentDidMount(){
     showVideos = function(){
-     var addVideo = document.getElementById('mainscreen');
+     var addVideo = document.getElementById("mainscreen");
      addVideo.appendChild(<Displayvideo />);
     }
     
