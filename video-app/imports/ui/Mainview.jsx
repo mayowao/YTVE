@@ -14,9 +14,8 @@ export default class Mainview extends Component {
      <Displayvideo />,
      document.getElementById("mainscreen")
      );
-    }
     
-    var doShow = showVideos();
+
  }
 
   getRelVideos() {
