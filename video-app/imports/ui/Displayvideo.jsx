@@ -144,8 +144,8 @@ export default class Displayvideo extends Component {
     var getSpeeds = this.state.player.getAvailablePlaybackRates();
     //console.log(getSpeeds);
     var nowSpeed = this.state.speed;
-    var adjInd = getSpeeds.indexOf(nowSpeed);
-    var adjSpeed = getSpeeds[adjInd+1];
+    var adjInd = getSpeeds.indexOf(nowSpeed)+1;
+    var adjSpeed = getSpeeds[adjInd];
     this.state.player.setPlaybackRate(adjSpeed);
     //this.setState({speedUpButton: adjSpeed});
   }
@@ -154,8 +154,8 @@ export default class Displayvideo extends Component {
     var getSpeeds = this.state.player.getAvailablePlaybackRates();
     //console.log(getSpeeds);
     var nowSpeed = this.state.speed;
-    var adjInd = getSpeeds.indexOf(nowSpeed);
-    var adjSpeed = getSpeeds[adjInd-1];
+    var adjInd = getSpeeds.indexOf(nowSpeed)-1;
+    var adjSpeed = getSpeeds[adjInd];
     this.state.player.setPlaybackRate(adjSpeed);
     //this.setState({speedUpButton: adjSpeed});
   }
@@ -181,9 +181,8 @@ export default class Displayvideo extends Component {
 
   onReady(event){
        this.setState({player: event.target});
-    console.log(this.state.player);
+       console.log(this.state.player);
        var seeInitRate = event.target.getPlaybackRate();
-       console.log(seeInitRate);
    }
  
   onPlaybackRateChange(event){
@@ -221,17 +220,17 @@ export default class Displayvideo extends Component {
               <td>
                <table><tbody><tr><td>
                <form>
-                <input type="button" value={this.state.speed} onClick={this.speedDown}/>
+                <input className= "editbtns" type="button" value={this.state.speed} onClick={this.speedDown}/>
                </form>
                 </td><td>
                <form>
-                <input type="button" value={this.state.speed} onClick={this.speedUp}/>
+                <input className= "editbtns" type="button" value={this.state.speed} onClick={this.speedUp}/>
                </form>
                 </td></tr></tbody></table>
               </td>
               <td>
                <form>
-                <input type="button" value={this.state.loopButton} onClick={this.loopVid}/>
+                <input className= "editbtns" type="button" value={this.state.loopButton} onClick={this.loopVid}/>
                </form>
               </td>
              </tr>
