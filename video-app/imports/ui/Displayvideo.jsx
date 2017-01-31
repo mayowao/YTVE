@@ -153,7 +153,7 @@ export default class Displayvideo extends Component {
 
   onReady(event){
        //event.target.playVideo();
-       event.target.setPlaybackRate(0.5);
+       //event.target.setPlaybackRate(0.5);
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
        this.setState({speed: seeInitRate});
