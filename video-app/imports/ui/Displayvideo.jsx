@@ -147,7 +147,7 @@ export default class Displayvideo extends Component {
     var adjInd = getSpeeds.indexOf(nowSpeed);
     var adjSpeed = getSpeeds[adjInd+1];
     this.state.player.setPlaybackRate(adjSpeed);
-    this.setState({speedUpButton: adjSpeed});
+    //this.setState({speedUpButton: adjSpeed});
   }
  
  speedDown(event) {
@@ -157,7 +157,7 @@ export default class Displayvideo extends Component {
     var adjInd = getSpeeds.indexOf(nowSpeed);
     var adjSpeed = getSpeeds[adjInd-1];
     this.state.player.setPlaybackRate(adjSpeed);
-    this.setState({speedUpButton: adjSpeed});
+    //this.setState({speedUpButton: adjSpeed});
   }
  
   handleSpeedClick(event) {
@@ -221,11 +221,11 @@ export default class Displayvideo extends Component {
               <td>
                <table><tbody><tr><td>
                <form>
-                <input type="button" value={this.state.speedDownButton} onClick={this.speedDown}/>
+                <input type="button" value={this.state.speed} onClick={this.speedDown}/>
                </form>
                 </td><td>
                <form>
-                <input type="button" value={this.state.speedUpButton} onClick={this.speedUp}/>
+                <input type="button" value={this.state.speed} onClick={this.speedUp}/>
                </form>
                 </td></tr></tbody></table>
               </td>
