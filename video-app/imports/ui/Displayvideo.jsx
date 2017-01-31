@@ -32,7 +32,7 @@ export default class Displayvideo extends Component {
       playerVars: { // https://developers.google.com/youtube/player_parameters 
         autoplay: '1',
         //cc_load_policy: '',
-        color: 'orange',
+        color: 'white',
         controls: '1',
         disablekb: '0',
         enablejsapi: '1',
@@ -241,7 +241,7 @@ export default class Displayvideo extends Component {
                <td>
                 <div className="edithoover">
                  <form>
-                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
+                     <input type="number" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
                    <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
                 </div>
