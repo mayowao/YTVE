@@ -78,6 +78,7 @@ export default class Displayvideo extends Component {
     this.onReady = this.onReady.bind(this);
     this.onPlaybackRateChange = this.onPlaybackRateChange.bind(this);
     this.speedUp = this.speedUp.bind(this);
+    this.speedDown = this.speedDown.bind(this);
     this.loopVid = this.loopVid.bind(this);
   }
  
@@ -149,6 +150,16 @@ export default class Displayvideo extends Component {
     //event.target.mute();
   }
  
+ speedDown(event) {
+    var getSpeeds = this.state.player.getAvailablePlaybackRates();
+    //console.log(getSpeeds);
+    var newSpeed = this.state.speed;
+    var adjSpeed = newSpeed*0.5;
+    this.state.player.setPlaybackRate(adjSpeed);
+    this.setState({speedUpButton: adjSpeed});
+    //event.target.mute();
+  }
+ 
   handleSpeedClick(event) {
     //this.setState({speed: event.target.value});
   }
@@ -212,6 +223,9 @@ export default class Displayvideo extends Component {
               <td>
                <form>
                 <input type="button" value={this.state.speedUpButton} onClick={this.speedUp}/>
+               </form>
+               <form>
+                <input type="button" value={this.state.speedDownButton} onClick={this.speedDown}/>
                </form>
               </td>
               <td>
