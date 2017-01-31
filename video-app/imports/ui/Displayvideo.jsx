@@ -221,12 +221,15 @@ export default class Displayvideo extends Component {
             <tbody>
              <tr>
               <td>
+               <table><tbody><tr><td>
                <form>
                 <input type="button" value={this.state.speedUpButton} onClick={this.speedUp}/>
                </form>
+                </td><td>
                <form>
                 <input type="button" value={this.state.speedDownButton} onClick={this.speedDown}/>
                </form>
+                </td></tr></tbody></table>
               </td>
               <td>
                <form>
