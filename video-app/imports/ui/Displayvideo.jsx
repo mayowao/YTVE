@@ -126,7 +126,7 @@ export default class Displayvideo extends Component {
   }
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
   speedUp(event) {
-    var getSpeeds = event.target.getAvailablePlaybackRates();
+    var getSpeeds = this.state.player.getAvailablePlaybackRates();
     console.log(getSpeeds);
     var newSpeed = this.state.speed;
     var adjSpeed = newSpeed*2;
