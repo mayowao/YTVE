@@ -241,7 +241,7 @@ export default class Displayvideo extends Component {
                <td>
                 <div className="edithoover">
                  <form>
-                     <input type="text" value={this.state.speed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
+                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
                    <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
                 </div>
