@@ -204,7 +204,7 @@ export default class Displayvideo extends Component {
          <div className="dragtry">
            <YouTube
              videoId={this.state.videoId}                  
-             id={this.state.id}                       
+             //id={this.state.id}                       
              className={this.state.className}
              opts={this.state.opts}
              onReady={this.onReady}
