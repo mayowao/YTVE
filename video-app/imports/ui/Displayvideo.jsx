@@ -71,7 +71,7 @@ export default class Displayvideo extends Component {
     this.renderVideos = this.renderVideos.bind(this);
     this.handleSpeedClick = this.handleSpeedClick.bind(this);
     this.handleSpeedChange = this.handleSpeedChange.bind(this);
-    this.handleSpeedSubmit = this.handleSpeedSubmit.bind(this);
+    this.handleSpeedApply = this.handleSpeedApply.bind(this);
     this.onReady = this.onReady.bind(this);
     this.onPlaybackRateChange = this.onPlaybackRateChange.bind(this);
   }
@@ -138,9 +138,9 @@ export default class Displayvideo extends Component {
     this.setState({getSpeed: event.target.value});
   }
 
-  handleSpeedSubmit(event) {
+  handleSpeedApply(event) {
     YouTube.setPlaybackRate(this.state.getSpeed);
-    //alert('Speed was changed: ' + this.state.getSpeed);
+    alert('Speed was changed: ' + this.state.speed);
     event.preventDefault();
     //this.setState({value: 'Search'});
     console.log('Hello, youve submited');
@@ -156,7 +156,7 @@ export default class Displayvideo extends Component {
        //event.target.setPlaybackRate(0.5);
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
-       this.setState({speed: seeInitRate});
+       //this.setState({speed: seeInitRate});
        //event.target.mute();
      }
  
@@ -193,13 +193,13 @@ export default class Displayvideo extends Component {
             <tbody>
               <tr>
                <td>
-                 <form onSubmit={this.handleSpeedSubmit}>
+                 <form>
                    <label>
 
                      <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
 
                    </label>
-                   <input type="submit" value="Apply Video Speed" />
+                   <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
                </td>
               <td>
