@@ -44,7 +44,7 @@ export default class Displayvideo extends Component {
         //listType: '',
         loop: 0,
         //modestbranding: '',
-        //origin: '',
+        origin: 'http://http://localhost:3000/',
         //playlist: '',
         playsinline: 0,
         rel: 0,
