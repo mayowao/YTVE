@@ -24,38 +24,38 @@ export default class Displayvideo extends Component {
     super(props);
     this.state = {
      videoId: 'SXiSVQZLje8',                  // defaults -> null
-     id: 'player',                       // defaults -> null
+     id: '',                       // defaults -> null
      className: 'player2',                // defaults -> null
      opts: {
       height: '390',
       width: '640',
       playerVars: { // https://developers.google.com/youtube/player_parameters 
-        autoplay: 1,
-        cc_load_policy: '',
-        color: '',
-        controls: '',
-        disablekb: '',
-        enablejsapi: '',
-        end: '',
-        fs: '',
-        hl: '',
-        iv_load_policy: '',
-        list: '',
-        listType: '',
-        loop: '',
-        modestbranding: '',
+        autoplay: '1',
+        //cc_load_policy: '',
+        color: 'orange',
+        controls: '1',
+        disablekb: '0',
+        enablejsapi: '1',
+        //end: '',
+        fs: '1',
+        //hl: '',
+        iv_load_policy: '1',
+        //list: '',
+        //listType: '',
+        loop: '0',
+        //modestbranding: '',
         origin: '',
         playlist: '',
-        playsinline: '',
-        rel: '',
-        showinfo: '',
-        start: ''
+        playsinline: '0',
+        rel: '0',
+        //showinfo: '',
+        //start: ''
       }},                        // defaults -> {}
      
       speed: '1',
-      getSpeed: '',
-      speedUpButton: '',
-      speedDownButton: '',
+      getSpeed: '0',
+      speedUpButton: '1',
+      speedDownButton: '1',
       loopButton:'0',
      
      
@@ -238,7 +238,7 @@ export default class Displayvideo extends Component {
                <td>
                 <div className="edithoover">
                  <form>
-                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
+                     <input type="text" value={this.state.speed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
                    <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
                 </div>
