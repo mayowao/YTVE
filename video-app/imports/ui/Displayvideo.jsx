@@ -195,11 +195,11 @@ export default class Displayvideo extends Component {
               <tr>
                <td>
                  <form>
-                   <label>
+                   
 
                      <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
 
-                   </label>
+                   
                    <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
                </td>
