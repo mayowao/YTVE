@@ -155,6 +155,7 @@ export default class Displayvideo extends Component {
  
  speedDown(event) {
     var getSpeeds = this.state.player.getAvailablePlaybackRates();
+    console.log('sped down to' + this.state.speed);
     //console.log(getSpeeds);
     var nowSpeed = this.state.speed;
     var adjInd = getSpeeds.indexOf(nowSpeed)-1;
