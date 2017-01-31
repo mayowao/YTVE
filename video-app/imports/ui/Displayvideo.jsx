@@ -54,7 +54,9 @@ export default class Displayvideo extends Component {
      
       speed: '1',
       getSpeed: '',
-      speedButton: '',
+      speedUpButton: '',
+      speedDownButton: '',
+      loopButton:'0',
      
      
      onReady: function(event){},                    // defaults -> noop
@@ -75,14 +77,11 @@ export default class Displayvideo extends Component {
     this.handleSpeedApply = this.handleSpeedApply.bind(this);
     this.onReady = this.onReady.bind(this);
     this.onPlaybackRateChange = this.onPlaybackRateChange.bind(this);
+    this.speedUp = this.speedUp.bind(this);
+    this.loopVid = this.loopVid.bind(this);
   }
  
   handleEdits(){
-    speedFunc = function(){
-      YouTube.setPlaybackRate(0.25);
-    };
-   
-   var doSpeed = speedFunc();
   
   }
  
@@ -124,14 +123,28 @@ export default class Displayvideo extends Component {
   getVideos(){
     
   }
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ loopVid(event){
+   var newloop = this.state.opts.playerVars.loop;
+   newloop = 1 - newloop;
+   this.setState({opts: 
+                  {playerVars: 
+                   {loop: newloop}
+                  }
+                 });
+   this.setState({loopButton: newloop});
+ }
+ 
+ 
+ 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
   speedUp(event) {
-    //var getSpeeds = this.state.player.getAvailablePlaybackRates();
-    //console.log(getSpeeds);
+    var getSpeeds = this.state.player.getAvailablePlaybackRates();
+    console.log(getSpeeds);
     var newSpeed = this.state.speed;
     var adjSpeed = newSpeed*2;
     this.state.player.setPlaybackRate(adjSpeed);
-    this.setState({speedButton: adjSpeed});
+    this.setState({speedUpButton: adjSpeed});
     //event.target.mute();
   }
  
@@ -197,7 +210,12 @@ export default class Displayvideo extends Component {
              <tr>
               <td>
                <form>
-                <input type="button" value={this.state.speedButton} onClick={this.speedUp}/>
+                <input type="button" value={this.state.speedUpButton} onClick={this.speedUp}/>
+               </form>
+              </td>
+              <td>
+               <form>
+                <input type="button" value={this.state.loopButton} onClick={this.loopVid}/>
                </form>
               </td>
              </tr>
