@@ -42,7 +42,7 @@ export default class Displayvideo extends Component {
         iv_load_policy: '1',
         //list: '',
         //listType: '',
-        loop: '0',
+        loop: 0,
         //modestbranding: '',
         origin: '',
         playlist: '',
