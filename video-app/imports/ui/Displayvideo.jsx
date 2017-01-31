@@ -139,7 +139,7 @@ export default class Displayvideo extends Component {
   }
 
   handleSpeedApply(event) {
-    YouTube.PlayerState.setPlaybackRate(this.state.getSpeed);
+    this.state.player.setPlaybackRate(this.state.getSpeed);
     alert('Speed was changed: ' + this.state.speed);
     event.preventDefault();
     //this.setState({value: 'Search'});
@@ -154,6 +154,7 @@ export default class Displayvideo extends Component {
   onReady(event){
        //event.target.playVideo();
        //event.target.setPlaybackRate(0.5);
+       this.setState({player: event.target});
        var seeInitRate = event.target.getPlaybackRate();
        console.log(seeInitRate);
        //this.setState({speed: seeInitRate});
