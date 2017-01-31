@@ -52,8 +52,9 @@ export default class Displayvideo extends Component {
         start: ''
       }},                        // defaults -> {}
      
-      speed: '',
+      speed: '1',
       getSpeed: '',
+      speedButton: '',
      
      
      onReady: function(event){},                    // defaults -> noop
@@ -124,11 +125,15 @@ export default class Displayvideo extends Component {
     
   }
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
-    speedUp(event) {
-    var newSpeed = this.seeRate + 0.5;
-    YouTube.setPlaybackRate(newSpeed);
+  speedUp(event) {
+    var getSpeeds = event.target.getAvailablePlaybackRates();
+    console.log(getSpeeds);
+    var newSpeed = this.state.speed;
+    var adjSpeed = newSpeed*2;
+    this.state.player.setPlaybackRate(adjSpeed);
+    this.setState({speedButton: adjSpeed});
     //event.target.mute();
-    }
+  }
  
   handleSpeedClick(event) {
     //this.setState({speed: event.target.value});
@@ -188,16 +193,21 @@ export default class Displayvideo extends Component {
           <div className="editopts">
             <table>
             <tbody>
+             <tr>
+              <td>
+               <form>
+                <input type="button" value={this.state.speedButton} onClick={this.speedUp}/>
+               </form>
+              </td>
+             </tr>
               <tr>
                <td>
+                <div className="edithoover">
                  <form>
-                   
-
-                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />
-
-                   
+                     <input type="text" value={this.state.getSpeed} onClick={this.handleSpeedClick} onChange={this.handleSpeedChange} />                  
                    <input type="button" onClick={this.handleSpeedApply} value="Apply Video Speed" />
                   </form>
+                </div>
                </td>
               <td>
                 <strong>
