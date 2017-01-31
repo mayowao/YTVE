@@ -53,7 +53,7 @@ export default class Displayvideo extends Component {
       }},                        // defaults -> {}
      
       speed: '1',
-      getSpeed: '0',
+      getSpeed: '1',
       speedUpButton: '1',
       speedDownButton: '1',
       loopButton:'0',
