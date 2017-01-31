@@ -126,15 +126,18 @@ export default class Displayvideo extends Component {
   }
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  loopVid(event){
+   var startTime = this.state.player.getCurrentTime();
    var newloop = this.state.opts.playerVars.loop;
    console.log(newloop);
    newloop = 1 - newloop;
    this.setState({opts: 
                   {playerVars: 
-                   {loop: newloop}
+                   {loop: newloop,
+                    start: startTime}
                   }
                  });
    this.setState({loopButton: newloop});
+   this.state.player.playVideo();
  }
  
  
