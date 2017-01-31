@@ -145,7 +145,7 @@ export default class Displayvideo extends Component {
     //console.log(getSpeeds);
     var nowSpeed = this.state.speed;
     var adjInd = getSpeeds.indexOf(nowSpeed);
-    var adjSpeed = getSpeeds[adjInd];
+    var adjSpeed = getSpeeds[adjInd+1];
     this.state.player.setPlaybackRate(adjSpeed);
     this.setState({speedUpButton: adjSpeed});
   }
@@ -153,11 +153,11 @@ export default class Displayvideo extends Component {
  speedDown(event) {
     var getSpeeds = this.state.player.getAvailablePlaybackRates();
     //console.log(getSpeeds);
-    var newSpeed = this.state.speed;
-    var adjSpeed = newSpeed*0.5;
+    var nowSpeed = this.state.speed;
+    var adjInd = getSpeeds.indexOf(nowSpeed);
+    var adjSpeed = getSpeeds[adjInd-1];
     this.state.player.setPlaybackRate(adjSpeed);
     this.setState({speedUpButton: adjSpeed});
-    //event.target.mute();
   }
  
   handleSpeedClick(event) {
